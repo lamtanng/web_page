@@ -446,6 +446,48 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: "CentraNo2";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src:
+      url("./assets/fonts/CentraNo2-Light.otf") format("opeembedded-opentype"),
+      url("./assets/fonts/CentraNo2-Light.ttf") format("truetype");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CentraNo2";
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  src:
+      url("./assets/fonts/CentraNo2-Medium.otf") format("opeembedded-opentype"),
+      url("./assets/fonts/CentraNo2-Medium.ttf") format("truetype");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CentraNo2";
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src:
+      url("./assets/fonts/CentraNo2-Bold.otf") format("opeembedded-opentype"),
+      url("./assets/fonts/CentraNo2-Bold.ttf") format("truetype");
+
+  font-display: swap;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -554,30 +596,20 @@ video {
   --tw-contain-style:  ;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
+/* typoraphy */
 
-.font-bold {
-  font-weight: 700;
-}
+/* button text */
 
-.text-yellow-800 {
-  --tw-text-opacity: 1;
-  color: rgb(133 77 14 / var(--tw-text-opacity));
-}
+/* caption */
 
-.text-yellow-500 {
-  --tw-text-opacity: 1;
-  color: rgb(234 179 8 / var(--tw-text-opacity));
-}
-
-.underline {
+.caption-regular-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
   text-decoration-line: underline;
 }
 
-.hover\:text-red-800:hover {
+.text-secondary {
   --tw-text-opacity: 1;
-  color: rgb(153 27 27 / var(--tw-text-opacity));
+  color: rgb(113 115 139 / var(--tw-text-opacity));
 }
