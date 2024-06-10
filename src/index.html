@@ -4,8 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
   </head>
   <body>
-    <h1 class="hover:text-gra caption-regular-link text-secondary">Username</h1>
+    <div class="root">
+      <div
+        class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
+      >
+        <header
+          class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary/70 px-5 pb-2 pt-4 lg:px-40"
+        >
+          <a href="#">
+            <img
+              src="./assets/icons/logo-goto.svg"
+              alt="Logo"
+              class="h-8 w-44"
+            />
+          </a>
+
+          <ul
+            class="button-semibold hidden text-primary lg:flex lg:items-center lg:justify-between lg:gap-6"
+            id="header-menu"
+            role="list"
+          >
+            <li>
+              <a
+                href="#"
+                class="transition-all duration-300 ease-in-out hover:text-main"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="transition-all duration-300 ease-in-out hover:text-main"
+                >Course</a
+              >
+            </li>
+            <li class="ml-4">
+              <a href="#" class="cus-button">Registered</a>
+            </li>
+            <li
+              class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold lg:hidden"
+              id="header-menu-close-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </li>
+          </ul>
+
+          <div class="cursor-pointer lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+              id="header-menu-toggle-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+        </header>
+        <!-- End header-->
+
+        <main class="mt-[theme(height.header)]">
+          <div
+            class="thumb relative flex h-screen items-center justify-between overflow-hidden max-lg:flex-col"
+          >
+            <img
+              src="./assets/images/thumb-left.png"
+              alt="Thumbnal"
+              class="aspect-auto w-4/5 self-center lg:w-[55%] lg:self-end"
+            />
+
+            <div class="container px-5 max-lg:text-center">
+              <div
+                class="mx-auto flex flex-col items-center justify-between gap-2 lg:items-start"
+              >
+                <h1
+                  class="caption-semibold text-5xl leading-[76px] text-primary lg:text-[64px]"
+                >
+                  Frontend Dev <br />
+                  <span class="text-main">Training Center</span>
+                </h1>
+                <p class="typo-semibold text-xl text-secondary">
+                  Teach from experience, learn from reality to create products
+                  of high value
+                </p>
+              </div>
+              <a
+                href="#"
+                class="cus-button mx-auto mt-4 drop-shadow-xl lg:mt-12"
+                >Start learning</a
+              >
+              <img
+                src="./assets/images/thumb-right.png"
+                alt="Thumbnal"
+                class="absolute right-0 top-0 hidden lg:block"
+              />
+            </div>
+          </div>
+          <!--End thumb-->
+
+          <div class="thumb"></div>
+          <!--End coming-soon-->
+          <div class="thumb"></div>
+          <!--End all-courses-->
+          <div class="thumb"></div>
+          <!--End AC-team-->
+          <div class="thumb"></div>
+          <!--End special-value-->
+          <div class="thumb"></div>
+          <!--End student-evaluation-->
+          <div class="thumb"></div>
+          <!--End asked-question-->
+        </main>
+        <!-- End main-->
+        <footer>
+          <div class="references"></div>
+          <div class="bottom-footer"></div>
+        </footer>
+        <!-- End footer-->
+      </div>
+    </div>
   </body>
 </html>

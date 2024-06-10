@@ -41,6 +41,7 @@ const theme = {
     main: themeColors.primary[5],
     light: themeColors.gray[1],
     dark: themeColors.gray[7],
+    white: colors.white,
   },
 };
 
@@ -59,6 +60,25 @@ module.exports = {
       },
       fontFamily: {
         centra: ["CentraNo2", "sans-serif"],
+      },
+      height: {
+        header: "4.5rem",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(-100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+
+        slideUp: {
+          "0%": { transform: "translateY(0)", opacity: 1 },
+          "100%": { transform: "translateY(-100%)", opacity: 0 },
+        },
+        
+      },
+      animation: {
+        slideDown: "slideDown 400ms ease-in-out",
+        slideUp: "slideUp 400ms ease-in-out",
       },
     },
   },

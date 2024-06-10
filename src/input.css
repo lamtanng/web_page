@@ -32,7 +32,7 @@
   }
 }
 
-@layer components{
+@layer components {
   /* typoraphy */
   .typo-regular {
     @apply text-sm font-normal leading-6;
@@ -47,37 +47,48 @@
     @apply text-sm font-medium leading-6;
   }
   .typo-semibold-link {
-    @apply text-sm font-medium leading-6 underline;
+    @apply font-medium leading-6 underline;
   }
   .typo-semibold-strike {
-    @apply text-sm font-medium leading-6 line-through;
+    @apply font-medium leading-6 line-through;
   }
 
   /* button text */
   .button-semibold {
-    @apply text-sm font-bold leading-6;
+    @apply font-bold leading-6;
   }
   .button-semibold-link {
-    @apply text-sm font-bold leading-6 underline;
+    @apply font-bold leading-6 underline;
   }
 
   /* caption */
   .caption-regular {
-    @apply text-sm font-normal leading-4;
+    @apply font-normal leading-4;
   }
   .caption-regular-link {
-    @apply text-sm font-normal leading-4 underline;
+    @apply font-normal leading-4 underline;
   }
   .caption-regular-strike {
-    @apply text-sm font-normal leading-4 line-through;
+    @apply font-normal leading-4 line-through;
   }
   .caption-semibold {
-    @apply text-sm font-medium leading-4;
+    @apply font-bold leading-4;
   }
   .caption-semibold-link {
-    @apply text-sm font-medium leading-4 underline;
+    @apply font-bold leading-4 underline;
   }
   .caption-semibold-strike {
-    @apply text-sm font-medium leading-4 line-through;
+    @apply font-bold leading-4 line-through;
+  }
+
+  /* custom style */
+  .cus-button {
+    @apply button-semibold inline-block rounded-3xl bg-tertiary px-7 pb-3 pt-4 leading-4 text-white transition-all duration-300 ease-in-out hover:bg-main;
+  }
+  .isActive {
+    @apply bg-main;
+  }
+  .header-menu__expanded {
+    @apply absolute left-0 top-0 z-50 flex h-screen w-full animate-slideDown flex-col items-center justify-center gap-4 bg-main text-2xl font-medium text-white;
   }
 }
