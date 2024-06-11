@@ -4,89 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/toggle.js" type="text/javascript" async></script>
+    <script
+      src="./assets/js/asked-question-toggle.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script src="./assets/js/swiper.js" type="text/javascript" defer></script>
+    <script src="./assets/components/course.js" type="module" defer></script>
+    <script src="./assets/components/faqs.js" type="module" defer></script>
+    <script src="./assets/layout/footer.js" type="module" defer></script>
+    <script src="./assets/layout/header.js" type="module" defer></script>
+    <script
+      src="./assets/components/special-value.js"
+      type="module"
+      defer
+    ></script>
   </head>
   <body>
     <div class="root">
       <div
         class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
       >
-        <header
-          class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary/70 px-5 pb-2 pt-4 lg:px-40"
-        >
-          <a href="#">
-            <img
-              src="./assets/icons/logo-goto.svg"
-              alt="Logo"
-              class="h-8 w-44"
-            />
-          </a>
-
-          <ul
-            class="button-semibold hidden text-primary lg:flex lg:items-center lg:justify-between lg:gap-6"
-            id="header-menu"
-            role="list"
-          >
-            <li>
-              <a
-                href="#"
-                class="transition-all duration-300 ease-in-out hover:text-main"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="transition-all duration-300 ease-in-out hover:text-main"
-                >Course</a
-              >
-            </li>
-            <li class="ml-4">
-              <a href="#" class="cus-button">Registered</a>
-            </li>
-            <li
-              class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold lg:hidden"
-              id="header-menu-close-icon"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </li>
-          </ul>
-
-          <div class="cursor-pointer lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-              id="header-menu-toggle-icon"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
-        </header>
+        <my-header></my-header>
         <!-- End header-->
 
         <main class="mt-[theme(height.header)]">
-          <div
+          <section
             class="thumb relative flex h-screen items-center justify-between overflow-hidden max-lg:flex-col"
           >
             <img
@@ -112,7 +63,7 @@
               </div>
               <a
                 href="#"
-                class="cus-button mx-auto mt-4 drop-shadow-xl lg:mt-12"
+                class="cus-button-primary mx-auto mt-4 drop-shadow-xl lg:mt-12"
                 >Start learning</a
               >
               <img
@@ -121,27 +72,317 @@
                 class="absolute right-0 top-0 hidden lg:block"
               />
             </div>
-          </div>
+          </section>
           <!--End thumb-->
 
-          <div class="thumb"></div>
+          <section id="coming-soon" class="">
+            <!-- Slider main container -->
+          </section>
           <!--End coming-soon-->
-          <div class="thumb"></div>
+
+          <section id="all-courses " class="mx-padding-page bg-secondary p-12">
+            <div class="flex items-start justify-between gap-16">
+              <div class="item basis-1/2">
+                <div class="mb-7 text-left">
+                  <h4 class="caption-semibold text-4xl text-primary">
+                    All Courses
+                  </h4>
+                  <p class="typo-semibold text-secondary">
+                    Including courses on design and frontend such as: Frontend
+                    Newbie, Frontend Master, Web Responsive, React JS Master,
+                    Graphic Design,...
+                  </p>
+                </div>
+                <div class="flex flex-col items-start justify-between gap-32">
+                  <div class="course">
+                    <a href="#" class="">
+                      <img
+                        src="./assets/images/course-react.png"
+                        alt="React Course"
+                        class="aspect-square w-full object-cover object-center"
+                      />
+                    </a>
+                    <div
+                      class="mt-6 flex flex-col items-start justify-between gap-2"
+                    >
+                      <span class="typo-regular uppercase text-secondary"
+                        >backend</span
+                      >
+                      <a
+                        href="#"
+                        class="caption-semibold text-2xl text-primary"
+                      >
+                        ReactJS
+                      </a>
+                      <div class="flex w-full items-center justify-between">
+                        <div class="flex items-center justify-between gap-3">
+                          <div
+                            class="aspect-square w-8 overflow-hidden rounded-full"
+                          >
+                            <img
+                              src="./assets/images/avt.jpg"
+                              alt="Avatar"
+                              class="h-full w-full object-cover object-top"
+                            />
+                          </div>
+                          <span class="typo-regular capitalize text-secondary"
+                            >Nguyen Tan Lam</span
+                          >
+                        </div>
+                        <div class="caption-semibold">4.500.000 đ</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <my-course
+                    type="Game"
+                    author="Jane Cooper"
+                    price="4.000.000"
+                    title="Unity"
+                    avtImg="./assets/images/avt.jpg"
+                    courseImg="./assets/images/course-react.png"
+                  ></my-course>
+                </div>
+              </div>
+              <div
+                class="flex basis-1/2 flex-col items-start justify-between gap-32"
+              >
+                <my-course
+                  type="Game"
+                  author="Jane Cooper"
+                  price="4.000.000"
+                  title="Unity"
+                  avtImg="./assets/images/avt.jpg"
+                  courseImg="./assets/images/course-react.png"
+                ></my-course>
+
+                <my-course
+                  type="Game"
+                  author="Jane Cooper"
+                  price="4.000.000"
+                  title="Unity"
+                  avtImg="./assets/images/avt.jpg"
+                  courseImg="./assets/images/course-react.png"
+                ></my-course>
+              </div>
+            </div>
+            <a href="#" class="cus-button-secondary float-end">View all</a>
+          </section>
           <!--End all-courses-->
-          <div class="thumb"></div>
+
+          <section class="thumb mb-16 h-96"></section>
           <!--End AC-team-->
-          <div class="thumb"></div>
+
+          <section id="special-value" class="bg-secondary">
+            <div class="mx-52 flex items-center justify-between gap-10 py-14">
+              <div
+                class="caption-semibold basis-1/2 text-[40px] leading-normal"
+              >
+                <p class="text-primary">
+                  Special Value <br />
+                  <span class="text-main">from Appscyclone</span>
+                </p>
+                <img
+                  src="./assets/images/special-value.png"
+                  alt="Image"
+                  class="img"
+                />
+              </div>
+
+              <div class="flex basis-1/2 flex-col items-start justify-between">
+                <my-special-value
+                  title="Real-life training program"
+                  description="The learning curve at Appscycloneis straight to the point, close to the actual requirements, communicated from experienced and dedicated instructors."
+                ></my-special-value>
+                <my-special-value
+                  title="Companion and support 24/7"
+                  description="Instructors, mentors and students are a cohesive team, together supporting, connecting and helping each other throughout the learning and career development process."
+                ></my-special-value>
+                <my-special-value
+                  title='Put the word "Mind" in everything'
+                  description="The mind of the teacher, together with the enthusiasm of the learners, will be successful on the career path of each of us."
+                ></my-special-value>
+                <my-special-value
+                  title="Various forms of learning"
+                  description="Study offline or online with offline through google meet, as well as live & video courses with instructors, and mentor-supported video lessons."
+                ></my-special-value>
+              </div>
+            </div>
+          </section>
           <!--End special-value-->
-          <div class="thumb"></div>
+
+          <section id="student-evaluation" class="h-[100px]"></section>
           <!--End student-evaluation-->
-          <div class="thumb"></div>
+
+          <section id="asked-question " class="thumb relative overflow-hidden">
+            <img src="./assets/images/faqs-left.png" alt="Vector" class="absolute -left-5 bottom-96 scale-90">
+            <img src="./assets/images/faqs-right.png" alt="Vector" class="absolute -right-4 bottom-96 scale-90">
+
+            <div class="px-padding-page w-full flex items-start justify-between relative">
+              <h5 class="caption-semibold basis-2/5 mt-4 text-4xl leading-normal text-primary">
+                Frequently <br>Asked Questions
+              </h5>
+              <ul class="basis-3/5">
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                >
+                <div class="cursor-pointer flex flex-col items-start justify-between">
+                  <p class="caption-semibold text-base text-primary">
+                      Add commonly asked questions here
+                  </p>
+                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary"></p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam uto lectus molestie malesuada vitae vel purus.
+                      </p>
+                  </div>
+                  </div>
+                  <div class="icon">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
+                  >
+                      <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                      />
+                  </svg>
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                >
+                <div class="cursor-pointer flex flex-col items-start justify-between">
+                  <p class="caption-semibold text-base text-primary">
+                      Add commonly asked questions here
+                  </p>
+                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary"></p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam uto lectus molestie malesuada vitae vel purus.
+                      </p>
+                  </div>
+                  </div>
+                  <div class="icon">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
+                  >
+                      <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                      />
+                  </svg>
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                >
+                <div class="cursor-pointer flex flex-col items-start justify-between">
+                  <p class="caption-semibold text-base text-primary">
+                      Add commonly asked questions here
+                  </p>
+                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary"></p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam uto lectus molestie malesuada vitae vel purus.
+                      </p>
+                  </div>
+                  </div>
+                  <div class="icon">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
+                  >
+                      <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                      />
+                  </svg>
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                >
+                <div class="cursor-pointer flex flex-col items-start justify-between">
+                  <p class="caption-semibold text-base text-primary">
+                      Add commonly asked questions here
+                  </p>
+                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary"></p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam uto lectus molestie malesuada vitae vel purus.
+                      </p>
+                  </div>
+                  </div>
+                  <div class="icon">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
+                  >
+                      <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                      />
+                  </svg>
+                  </div>
+                </li>
+              </ul>
+              
+            </div>
+
+            <div class="mx-auto mt-64 text-center">
+              <h5 class="caption-semibold text-4xl  z-40 text-primary">
+                Appscyclone is a team
+              </h5>
+              <span class="typo-regular text-base mb-11 text-secondary"
+                >Everyone for one, one for all</span
+              ><img src="./assets/images/AC-team.png" alt="Apps Cyclone Team" />
+            </div>         
+          </section>
           <!--End asked-question-->
+          <section id="references" class="w-full py-48 bg-tertiary text-center">
+            <div class="w-1/2 mx-auto">
+              <h4 class="caption-semibold text-white text-4xl">Become a Part of Appscyclone</h4>
+              <p class="text-secondary mt-6 mb-10">We are very happy that you decided to become a part of <strong> Appscyclone </strong> to learn, spread and share valuable experiences to the community.</p>
+              <div class="flex justify-center items-center gap-4">
+                <a href="#" class="cus-button-primary bg-primary text-primary hover:text-white">Join the Course</a>
+                <a href="#" class="cus-button-secondary text-white hover:bg-main">Teaching/Partner</a>
+              </div>
+            </div>
+          </section> <!--End reference-->
         </main>
         <!-- End main-->
-        <footer>
-          <div class="references"></div>
-          <div class="bottom-footer"></div>
-        </footer>
+
+        <my-footer></my-footer>
         <!-- End footer-->
       </div>
     </div>
