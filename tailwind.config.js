@@ -74,11 +74,17 @@ module.exports = {
           "0%": { transform: "translateY(0)", opacity: 1 },
           "100%": { transform: "translateY(-100%)", opacity: 0 },
         },
-        
       },
       animation: {
         slideDown: "slideDown 400ms ease-in-out",
         slideUp: "slideUp 400ms ease-in-out",
+      },
+      transitionProperty: {
+        max_height: "max-height",
+        spacing: "margin, padding",
+      },
+      spacing: {
+        "padding-page": "13rem",
       },
     },
   },

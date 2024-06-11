@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/components/course.js" type="module" defer></script>
+    <link href="./output.css" rel="stylesheet" />
+    <title>Courses</title>
+    <script src="./assets/layout/footer.js" type="module" defer></script>
+    <script src="./assets/layout/header.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="root">
+      <div
+        class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
+      >
+        <my-header></my-header>
+        <!-- End header -->
+
+        <main class="mt-[theme(height.header)]">
+          <section class="mx-padding-page my-32">
+            <h4 class="caption-semibold text-4xl capitalize text-primary">
+              All Courses
+            </h4>
+            <ul class="mt-10 flex items-center justify-start">
+              <button class="cus-btn-filter is-active-filter">All</button>
+              <button class="cus-btn-filter">Frontend</button>
+              <button class="cus-btn-filter">Backend</button>
+              <button class="cus-btn-filter">Design</button>
+              <button class="cus-btn-filter">Mobile</button>
+              <button class="cus-btn-filter">QC</button>
+              <button class="cus-btn-filter">Blockchain</button>
+            </ul>
+            <div class="mt-8 grid auto-cols-max grid-cols-3 gap-x-6 gap-y-14">
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+            </div>
+          </section>
+        </main>
+
+        <my-footer></my-footer>
+        <!-- End footer -->
+      </div>
+    </div>
+  </body>
+</html>
