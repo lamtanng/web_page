@@ -11,12 +11,12 @@ class MyCourse extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-        <div class="course p-5">
+        <div class="course p-5 ">
                   <a href="#" class="">
                     <img
                       src="${this.courseImg}"
                       alt="React Course"
-                      class="hover:scale-105 transition-all duration-200 ease-in-out"
+                      class="group-hover:scale-105 transition-all duration-200 ease-in-out"
                     />
                   </a>
                   <div
