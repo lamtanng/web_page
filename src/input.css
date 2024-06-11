@@ -91,11 +91,20 @@
   .cus-btn-filter {
     @apply button-semibold min-w-[130px] bg-secondary px-5 py-3 text-center leading-none text-primary hover:bg-gray-200;
   }
+  .cus-btn-pagination {
+    @apply cus-btn-filter aspect-square min-w-2;
+  }
+  .is-active-pagination {
+    @apply is-active-filter bg-main hover:bg-main;
+  }
   .is-active-filter {
     @apply bg-tertiary text-white hover:bg-tertiary hover:text-white;
   }
   .isActive {
     @apply bg-main;
+  }
+  .is-disable-btn {
+    @apply cursor-default bg-secondary text-secondary hover:bg-secondary hover:text-secondary;
   }
   .is-active-FAQ {
     @apply transition-max_height duration-300 ease-in-out;

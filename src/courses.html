@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,11 @@
     <title>Courses</title>
     <script src="./assets/layout/footer.js" type="module" defer></script>
     <script src="./assets/layout/header.js" type="module" defer></script>
+    <script
+      src="./assets/js/pagination.js"
+      type="text/javascript"
+      defer
+    ></script>
   </head>
   <body>
     <div class="root">
@@ -19,7 +24,10 @@
 
         <main class="mt-[theme(height.header)]">
           <section class="mx-padding-page my-32">
-            <h4 class="caption-semibold text-4xl capitalize text-primary">
+            <h4
+              id="heading"
+              class="caption-semibold text-4xl capitalize text-primary"
+            >
               All Courses
             </h4>
             <ul class="mt-10 flex items-center justify-start">
@@ -31,70 +39,50 @@
               <button class="cus-btn-filter">QC</button>
               <button class="cus-btn-filter">Blockchain</button>
             </ul>
-            <div class="mt-8 grid auto-cols-max grid-cols-3 gap-x-6 gap-y-14">
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
-              <my-course
-                type="Game"
-                author="Jane Cooper"
-                price="4.000.000"
-                title="Unity"
-                avtImg="./assets/images/avt.jpg"
-                courseImg="./assets/images/course-react.png"
-                class="bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-              ></my-course>
+            <div
+              id="course-list"
+              class="mt-8 grid  auto-cols-max auto-rows-min grid-cols-3 gap-x-6 gap-y-14"
+            ></div>
+
+            <div class="mt-16 flex items-center justify-center gap-5">
+              <a href="#heading" id="prev-button" class="cus-btn-pagination">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-3 font-semibold leading-3"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </a>
+
+              <div
+                id="page-numbers"
+                class="flex items-center justify-center gap-2"
+              ></div>
+
+              <a href="#heading" id="next-button" class="cus-btn-pagination">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-3 font-semibold leading-3"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </a>
             </div>
           </section>
         </main>
