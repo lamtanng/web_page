@@ -71,6 +71,9 @@
   .caption-regular-strike {
     @apply font-normal line-through;
   }
+  .caption-bold {
+    @apply font-medium;
+  }
   .caption-semibold {
     @apply font-bold;
   }
@@ -83,10 +86,10 @@
 
   /* custom style */
   .cus-button-primary {
-    @apply button-semibold inline-block rounded-full bg-tertiary px-8 pb-3 pt-4 text-white transition-all duration-300 ease-in-out hover:bg-main;
+    @apply button-semibold inline-block rounded-full bg-tertiary px-10 pb-3 pt-4 text-white transition-all duration-300 ease-in-out hover:bg-main;
   }
   .cus-button-secondary {
-    @apply button-semibold inline-block rounded-3xl border border-current bg-transparent px-7 pb-3 pt-4 text-primary transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-white;
+    @apply button-semibold inline-block rounded-3xl border border-current bg-transparent px-10 pb-2 pt-3 text-primary transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-white;
   }
   .cus-btn-filter {
     @apply button-semibold min-w-[130px] bg-secondary px-5 py-3 text-center leading-none text-primary hover:bg-gray-200;

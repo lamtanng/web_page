@@ -13,6 +13,11 @@
       type="text/javascript"
       defer
     ></script>
+    <script
+      src="./assets/js/active-filter.js"
+      type="text/javascript"
+      defer
+    ></script>
   </head>
   <body>
     <div class="root">
@@ -31,17 +36,19 @@
               All Courses
             </h4>
             <ul class="mt-10 flex items-center justify-start">
-              <button class="cus-btn-filter is-active-filter">All</button>
-              <button class="cus-btn-filter">Frontend</button>
-              <button class="cus-btn-filter">Backend</button>
-              <button class="cus-btn-filter">Design</button>
-              <button class="cus-btn-filter">Mobile</button>
-              <button class="cus-btn-filter">QC</button>
-              <button class="cus-btn-filter">Blockchain</button>
+              <button class="btn-tab-filter cus-btn-filter is-active-filter">
+                All
+              </button>
+              <button class="btn-tab-filter cus-btn-filter">Frontend</button>
+              <button class="btn-tab-filter cus-btn-filter">Backend</button>
+              <button class="btn-tab-filter cus-btn-filter">Design</button>
+              <button class="btn-tab-filter cus-btn-filter">Mobile</button>
+              <button class="btn-tab-filter cus-btn-filter">QC</button>
+              <button class="btn-tab-filter cus-btn-filter">Blockchain</button>
             </ul>
             <div
               id="course-list"
-              class="mt-8 grid  auto-cols-max auto-rows-min grid-cols-3 gap-x-6 gap-y-14"
+              class="mt-8 grid auto-cols-max auto-rows-min grid-cols-3 gap-x-6 gap-y-14"
             ></div>
 
             <div class="mt-16 flex items-center justify-center gap-5">

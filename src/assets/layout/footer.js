@@ -1,10 +1,10 @@
 class MyFooter extends HTMLElement {
-    constructor() {
-      super();
-    }
-  
-    connectedCallback() {
-      this.innerHTML = `
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
               <footer class="mx-52">
           <div class=" pt-20 flex items-start justify-between">
             <div class="basis-2/4 flex flex-col justify-between items-start gap-4">
@@ -36,23 +36,22 @@ class MyFooter extends HTMLElement {
               </a>
                 <div class="flex justify-between items-center gap-4">
                   <a href="#">
-                    <img src="./assets/images/twitter.png" alt="twitter">
+                    <img src="./assets/icons/twitter.png" alt="twitter">
                   </a>
                   <a href="#">
-                    <img src="./assets/images/whatsapp.png" alt="whatsapp">
+                    <img src="./assets/icons/whatsapp.png" alt="whatsapp">
                   </a>
                   <a href="#">
-                    <img src="./assets/images/facebook.png" alt="facebook">
+                    <img src="./assets/icons/facebook.png" alt="facebook">
                   </a>
                     
                 </div>  
             </div>
           </div>
-          <p class="pt-12 pb-20 text-secondary ">Copyright © 2023. All rights reserved.</p>
+          <p class="py-12 text-secondary ">Copyright © 2023. All rights reserved.</p>
         </footer>
         `;
-    }
   }
-  
-  customElements.define("my-footer", MyFooter);
-  
+}
+
+customElements.define("my-footer", MyFooter);

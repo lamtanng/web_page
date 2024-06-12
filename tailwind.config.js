@@ -62,7 +62,7 @@ module.exports = {
         centra: ["CentraNo2", "sans-serif"],
       },
       height: {
-        header: "4.5rem",
+        header: "5rem",
       },
       keyframes: {
         slideDown: {
@@ -85,6 +85,8 @@ module.exports = {
       },
       spacing: {
         "padding-page": "13rem",
+        "gutter-section-sm": "6.5rem",
+        "gutter-section-md": "10rem",
       },
     },
   },

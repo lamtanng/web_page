@@ -80,7 +80,7 @@
           </section>
           <!--End coming-soon-->
 
-          <section id="all-courses " class="mx-padding-page bg-secondary p-12">
+          <section id="all-courses " class="mx-padding-page bg-secondary p-12 mt-gutter-section-md">
             <div class="flex items-start justify-between gap-16">
               <div class="item basis-1/2">
                 <div class="mb-7 text-left">
@@ -94,45 +94,14 @@
                   </p>
                 </div>
                 <div class="flex flex-col items-start justify-between gap-32">
-                  <div class="course">
-                    <a href="#" class="">
-                      <img
-                        src="./assets/images/course-react.png"
-                        alt="React Course"
-                        class="aspect-square w-full object-cover object-center"
-                      />
-                    </a>
-                    <div
-                      class="mt-6 flex flex-col items-start justify-between gap-2"
-                    >
-                      <span class="typo-regular uppercase text-secondary"
-                        >backend</span
-                      >
-                      <a
-                        href="#"
-                        class="caption-semibold text-2xl text-primary"
-                      >
-                        ReactJS
-                      </a>
-                      <div class="flex w-full items-center justify-between">
-                        <div class="flex items-center justify-between gap-3">
-                          <div
-                            class="aspect-square w-8 overflow-hidden rounded-full"
-                          >
-                            <img
-                              src="./assets/images/avt.jpg"
-                              alt="Avatar"
-                              class="h-full w-full object-cover object-top"
-                            />
-                          </div>
-                          <span class="typo-regular capitalize text-secondary"
-                            >Nguyen Tan Lam</span
-                          >
-                        </div>
-                        <div class="caption-semibold">4.500.000 đ</div>
-                      </div>
-                    </div>
-                  </div>
+                  <my-course
+                    type="Game"
+                    author="Jane Cooper"
+                    price="4.000.000"
+                    title="Unity"
+                    avtImg="./assets/images/avt.jpg"
+                    courseImg="./assets/images/course-react.png"
+                  ></my-course>
 
                   <my-course
                     type="Game"
@@ -166,14 +135,16 @@
                 ></my-course>
               </div>
             </div>
-            <a href="#" class="cus-button-secondary float-end">View all</a>
+            <div class="w-full h-6">
+              <btn href="#" class="cus-button-secondary float-right">View all</btn>
+            </div>
           </section>
           <!--End all-courses-->
 
-          <section class="thumb mb-16 h-96"></section>
+          <section class="thumb"></section>
           <!--End AC-team-->
 
-          <section id="special-value" class="bg-secondary">
+          <section id="special-value" class="bg-secondary mt-gutter-section-md">
             <div class="mx-52 flex items-center justify-between gap-10 py-14">
               <div
                 class="caption-semibold basis-1/2 text-[40px] leading-normal"
@@ -211,10 +182,10 @@
           </section>
           <!--End special-value-->
 
-          <section id="student-evaluation" class="h-[100px]"></section>
+          <section id="student-evaluation" class=""></section>
           <!--End student-evaluation-->
 
-          <section id="asked-question " class="thumb relative overflow-hidden">
+          <section id="asked-question " class="thumb mt-gutter-section-md relative overflow-hidden">
             <img src="./assets/images/faqs-left.png" alt="Vector" class="absolute -left-5 bottom-96 scale-90">
             <img src="./assets/images/faqs-right.png" alt="Vector" class="absolute -right-4 bottom-96 scale-90">
 
@@ -369,6 +340,7 @@
             </div>         
           </section>
           <!--End asked-question-->
+          
           <section id="references" class="w-full py-48 bg-tertiary text-center">
             <div class="w-1/2 mx-auto">
               <h4 class="caption-semibold text-white text-4xl">Become a Part of Appscyclone</h4>
