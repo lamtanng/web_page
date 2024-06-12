@@ -17,7 +17,7 @@
       type="text/javascript"
       async
     ></script>
-    <script src="./assets/js/swiper.js" type="text/javascript" defer></script>
+    
     <script src="./assets/components/course.js" type="module" defer></script>
     <script src="./assets/components/faqs.js" type="module" defer></script>
     <script src="./assets/layout/footer.js" type="module" defer></script>
@@ -37,7 +37,7 @@
         <!-- End header-->
 
         <main class="mt-[theme(height.header)]">
-          <section
+          <section id="thumbnal"
             class="thumb relative flex h-screen items-center justify-between overflow-hidden max-lg:flex-col"
           >
             <img
@@ -93,7 +93,7 @@
                     Graphic Design,...
                   </p>
                 </div>
-                <div class="flex flex-col items-start justify-between gap-32">
+                <div class="flex flex-col items-start justify-between gap-32 ml-[-1.25rem]">
                   <my-course
                     type="Game"
                     author="Jane Cooper"
@@ -101,6 +101,7 @@
                     title="Unity"
                     avtImg="./assets/images/avt.jpg"
                     courseImg="./assets/images/course-react.png"
+                    class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
                   ></my-course>
 
                   <my-course
@@ -110,11 +111,13 @@
                     title="Unity"
                     avtImg="./assets/images/avt.jpg"
                     courseImg="./assets/images/course-react.png"
+                    class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
                   ></my-course>
                 </div>
               </div>
+
               <div
-                class="flex basis-1/2 flex-col items-start justify-between gap-32"
+                class="flex basis-1/2 flex-col items-start justify-between gap-32 "
               >
                 <my-course
                   type="Game"
@@ -123,6 +126,7 @@
                   title="Unity"
                   avtImg="./assets/images/avt.jpg"
                   courseImg="./assets/images/course-react.png"
+                  class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
                 ></my-course>
 
                 <my-course
@@ -132,6 +136,7 @@
                   title="Unity"
                   avtImg="./assets/images/avt.jpg"
                   courseImg="./assets/images/course-react.png"
+                  class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
                 ></my-course>
               </div>
             </div>

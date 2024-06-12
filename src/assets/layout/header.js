@@ -36,7 +36,7 @@ class MyHeader extends HTMLElement {
               >
             </li>
             <li class="ml-4">
-              <a href="#" class="cus-button-primary">Registered</a>
+              <a href="registered.html" class="cus-button-primary">Registered</a>
             </li>
             <li
               class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold lg:hidden"
