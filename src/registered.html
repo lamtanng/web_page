@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Registered</title>
+    <script src="./assets/layout/footer.js" type="module" defer></script>
+    <script src="./assets/layout/header.js" type="module" defer></script>
+    <script src="./assets/components/faqs.js" type="module" async></script>
+    <script
+      src="./assets/components/special-value.js"
+      type="module"
+      async
+    ></script>
+    <script src="./assets/components/course.js" type="module" async></script>
+    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
+    <script src="./assets/components/input.js" type="module" async></script>
+    <script
+      src="./assets/js/asked-question-toggle.js"
+      type="module"
+      async
+    ></script>
+  </head>
+  <body>
+    <div class="root">
+      <div
+        class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
+      >
+        <my-header></my-header>
+        <!-- End header -->
+
+        <main
+          class="mx-auto mb-gutter-section-md mt-[theme(height.header)] max-w-screen-md"
+        >
+          <section id="register-course" class="py-8">
+            <form action="#">
+              <h3 class="caption-semibold text-4xl capitalize">
+                Register for the Course
+              </h3>
+              <div
+                class="mt-8 flex flex-col items-center justify-between gap-10"
+              >
+                <div class="flex w-full items-center justify-between gap-8">
+                  <div class="basis-1/2">
+                    <my-input
+                      type="text"
+                      my_id="name"
+                      title="Name"
+                      placeholder="Enter your name"
+                      autocomplete="name"
+                    ></my-input>
+                  </div>
+                  <div class="basis-1/2">
+                    <my-input
+                      type="email"
+                      my_id="email"
+                      title="Email"
+                      placeholder="Enter your email"
+                      autocomplete="Email"
+                    ></my-input>
+                  </div>
+                </div>
+
+                <div class="flex w-full items-center justify-between gap-8">
+                  <div class="basis-1/2">
+                    <my-input
+                      type="tel"
+                      my_id="phone"
+                      title="Phone"
+                      placeholder="Enter your phone number"
+                      autocomplete="phone"
+                    ></my-input>
+                  </div>
+                  <div class="basis-1/2">
+                    <my-input
+                      type="phone"
+                      my_id="email"
+                      title="Email"
+                      placeholder="Enter your email"
+                      autocomplete="Email"
+                    ></my-input>
+                  </div>
+                </div>
+
+                <div class="w-full">
+                  <my-input
+                    type="url"
+                    my_id="fb-url"
+                    title="Facebook URL"
+                    placeholder="Enter your facebook URL"
+                    autocomplete="www.facebook.com"
+                  ></my-input>
+                </div>
+
+                <div class="w-full">
+                  <my-input
+                    type="text"
+                    my_id="person-opt"
+                    title="Personal opinion"
+                    placeholder="Enter your facebook URL"
+                    autocomplete="www.facebook.com"
+                  ></my-input>
+                </div>
+                <button
+                  type="submit"
+                  id="registered-btn"
+                  class="cus-button-primary w-full"
+                >
+                  Confirm
+                </button>
+              </div>
+            </form>
+          </section>
+          <!-- End cover -->
+        </main>
+        <!-- End main -->
+
+        <my-footer></my-footer>
+        <!-- End footer -->
+      </div>
+    </div>
+  </body>
+</html>

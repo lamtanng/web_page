@@ -10,7 +10,7 @@
     src:
       url("./assets/fonts/CentraNo2-Light.otf") format("opeembedded-opentype"),
       url("./assets/fonts/CentraNo2-Light.ttf") format("truetype");
-    font-display: swap;
+    /* font-display: swap; */
   }
   @font-face {
     font-family: "CentraNo2";
@@ -19,7 +19,7 @@
     src:
       url("./assets/fonts/CentraNo2-Medium.otf") format("opeembedded-opentype"),
       url("./assets/fonts/CentraNo2-Medium.ttf") format("truetype");
-    font-display: swap;
+    /* font-display: swap; */
   }
   @font-face {
     font-family: "CentraNo2";
@@ -28,7 +28,7 @@
     src:
       url("./assets/fonts/CentraNo2-Bold.otf") format("opeembedded-opentype"),
       url("./assets/fonts/CentraNo2-Bold.ttf") format("truetype");
-    font-display: swap;
+    /* font-display: swap; */
   }
 }
 
