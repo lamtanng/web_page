@@ -8,7 +8,7 @@ class MyHeader extends HTMLElement {
              <header
           class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary  px-5 pb-2 pt-4 lg:px-padding-page"
         >
-          <a href="#">
+          <a href="index.html">
             <img
               src="./assets/icons/logo-goto.svg"
               alt="Logo"
@@ -23,7 +23,7 @@ class MyHeader extends HTMLElement {
           >
             <li>
               <a
-                href="#"
+                href="index.html"
                 class="transition-all duration-300 ease-in-out hover:text-main"
                 >Home</a
               >

@@ -8,11 +8,13 @@ class MyCourse extends HTMLElement {
     this.avtImg = this.getAttribute("avtImg") || "./assets/images/no-avt.png";
     this.courseImg =
       this.getAttribute("courseImg") || "./assets/images/no-image.png";
+    this.courseDetailsUrl =
+      this.getAttribute("courseDetailsUrl") || "course-details.html";
   }
   connectedCallback() {
     this.innerHTML = `
         <div class="course p-5 ">
-                  <a href="#" class="">
+                  <a href="${this.courseDetailsUrl}" class="">
                     <img
                       src="${this.courseImg}"
                       alt="React Course"

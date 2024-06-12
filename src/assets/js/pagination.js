@@ -38,6 +38,7 @@ const renderCourseList = () => {
           price="${course.price}"
           avtImg="./assets/images/avt.jpg"
           courseImg="./assets/images/course-react.png"
+          courseDetailsUrl="course-details.html"
           class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
         ></my-course>
         `;
