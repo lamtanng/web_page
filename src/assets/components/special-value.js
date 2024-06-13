@@ -8,7 +8,7 @@ class MySpecialValue extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
         <div class="mb-7">
-            <p class="caption-semibold mb-1 text-2xl text-primary ">${this.title}</p>
+            <p class="caption-semibold mb-1 text-[18px] lg:text-2xl text-primary ">${this.title}</p>
             <span class="text-secondary text-justify block">${this.description}</span>
         </div>
     `;

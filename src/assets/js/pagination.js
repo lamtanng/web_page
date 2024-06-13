@@ -1,20 +1,4 @@
-const courseList = [
-  { type: "GAME", title: "ReactJS", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Blockchain", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-  { type: "GAME", title: "Game Development", author: "John Doe", price: 100 },
-];
+import courseList from "../data/courses.js";
 
 let currentPage = 1;
 let modelPerPage = 9;
@@ -38,7 +22,6 @@ const renderCourseList = () => {
           price="${course.price}"
           avtImg="./assets/images/avt.jpg"
           courseImg="./assets/images/course-react.png"
-          courseDetailsUrl="course-details.html"
           class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
         ></my-course>
         `;

@@ -11,17 +11,33 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
     <script
       src="./assets/js/asked-question-toggle.js"
       type="text/javascript"
       async
     ></script>
-    
+
     <script src="./assets/components/course.js" type="module" defer></script>
     <script src="./assets/components/faqs.js" type="module" defer></script>
+    <script
+      src="./assets/components/team-member.js"
+      type="module"
+      defer
+    ></script>
     <script src="./assets/layout/footer.js" type="module" defer></script>
     <script src="./assets/layout/header.js" type="module" defer></script>
+    <script src="./assets/js/swiper.js" type="text/javascript" async></script>
+    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
+    <script
+      src="./assets/js/swiper-coming-soon.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script
+      src="./assets/js/swiper-evaluation.js"
+      type="text/javascript"
+      async
+    ></script>
     <script
       src="./assets/components/special-value.js"
       type="module"
@@ -29,7 +45,7 @@
     ></script>
   </head>
   <body>
-    <div class="root">
+    <div class="root overflow-hidden">
       <div
         class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
       >
@@ -37,8 +53,9 @@
         <!-- End header-->
 
         <main class="mt-[theme(height.header)]">
-          <section id="thumbnal"
-            class="thumb relative flex h-screen items-center justify-between overflow-hidden max-lg:flex-col"
+          <section
+            id="thumbnal"
+            class="thumb relative flex h-screen items-center justify-start gap-4 overflow-hidden max-lg:flex-col lg:justify-between"
           >
             <img
               src="./assets/images/thumb-left.png"
@@ -46,12 +63,12 @@
               class="aspect-auto w-4/5 self-center lg:w-[55%] lg:self-end"
             />
 
-            <div class="container px-5 max-lg:text-center">
+            <div class="container px-padding-page-mobile max-lg:text-center">
               <div
                 class="mx-auto flex flex-col items-center justify-between gap-2 lg:items-start"
               >
                 <h1
-                  class="caption-semibold text-5xl leading-[76px] text-primary lg:text-[64px]"
+                  class="caption-semibold text-[40px] leading-normal text-primary lg:text-[64px] lg:leading-[76px]"
                 >
                   Frontend Dev <br />
                   <span class="text-main">Training Center</span>
@@ -75,25 +92,475 @@
           </section>
           <!--End thumb-->
 
-          <section id="coming-soon" class="">
-            <!-- Slider main container -->
+          <section
+            id="coming-soon"
+            class="mx-padding-page-mobile mt-gutter-section-sm lg:ml-padding-page lg:mt-gutter-section-md"
+          >
+            <div
+              class="itemitems-center flex justify-between gap-5 max-sm:flex-col"
+            >
+              <h5
+                class="caption-semibold basis-1/2 text-center text-3xl text-primary lg:text-left lg:text-4xl"
+              >
+                Course Coming soon
+              </h5>
+
+              <!-- navigate btn -->
+              <div class="flex basis-1/2 items-center justify-center gap-2">
+                <div class="slider-prev-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                    />
+                  </svg>
+                </div>
+                <div class="slider-next-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- start slider -->
+            <div class="mt-8 overflow-hidden lg:ml-32 lg:mt-12">
+              <div class="relative lg:ml-40 lg:bg-secondary lg:py-16">
+                <div class="swiper-commingsoon relative lg:-left-16">
+                  <!-- start slider-wrapper -->
+                  <div
+                    id="coming-soon-slider"
+                    class="swiper-wrapper relative h-fit w-full"
+                  >
+                    <div
+                      class="swiper-slide overflow-hidden max-sm:bg-secondary"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                      >
+                        <img
+                          src="./assets/images/course-react.png"
+                          alt=""
+                          class="aspect-square w-full lg:w-[345px]"
+                        />
+
+                        <!-- start info -->
+                        <div
+                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                        >
+                          <!-- title -->
+                          <div
+                            class="flex w-full flex-col items-start justify-between gap-3"
+                          >
+                            <div
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                >Frontend</span
+                              >
+                              <p
+                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                              >
+                                ReactJS
+                              </p>
+                            </div>
+
+                            <div
+                              class="hidden items-center justify-start gap-3 lg:flex"
+                            >
+                              <img
+                                src="./assets/images/avt.jpg"
+                                alt="Avatar"
+                                class="aspect-square w-8 overflow-hidden rounded-full object-cover object-top lg:w-10"
+                              />
+                              <p
+                                class="typo-semibold mt-1 text-base text-secondary"
+                              >
+                                Jane Cooper
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- time -->
+                          <div
+                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                          >
+                            <div
+                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Opening day</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                28/02/2023
+                              </p>
+                            </div>
+                            <div
+                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Learning form</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                Offline
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- btn -->
+                          <div
+                            class="flex w-full flex-col items-center justify-between gap-3 text-center lg:flex-row"
+                          >
+                            <a
+                              href=""
+                              class="cus-button-primary min-w-full basis-1/2 lg:min-w-56"
+                              >Register for school</a
+                            ><a
+                              href=""
+                              class="cus-button-secondary px-auto min-w-full basis-1/2 text-center lg:min-w-56"
+                              >See details</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-slide overflow-hidden max-sm:bg-secondary"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                      >
+                        <img
+                          src="./assets/images/course-react.png"
+                          alt=""
+                          class="aspect-square w-full lg:w-[345px]"
+                        />
+
+                        <!-- start info -->
+                        <div
+                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                        >
+                          <!-- title -->
+                          <div
+                            class="flex w-full flex-col items-start justify-between gap-3"
+                          >
+                            <div
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                >Frontend</span
+                              >
+                              <p
+                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                              >
+                                ReactJS
+                              </p>
+                            </div>
+
+                            <div
+                              class="hidden items-center justify-start gap-3 lg:flex"
+                            >
+                              <img
+                                src="./assets/images/avt.jpg"
+                                alt="Avatar"
+                                class="aspect-square w-8 overflow-hidden rounded-full object-cover object-top lg:w-10"
+                              />
+                              <p
+                                class="typo-semibold mt-1 text-base text-secondary"
+                              >
+                                Jane Cooper
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- time -->
+                          <div
+                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                          >
+                            <div
+                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Opening day</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                28/02/2023
+                              </p>
+                            </div>
+                            <div
+                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Learning form</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                Offline
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- btn -->
+                          <div
+                            class="flex w-full flex-col items-center justify-between gap-3 text-center lg:flex-row"
+                          >
+                            <a
+                              href=""
+                              class="cus-button-primary min-w-full basis-1/2 lg:min-w-56"
+                              >Register for school</a
+                            ><a
+                              href=""
+                              class="cus-button-secondary px-auto min-w-full basis-1/2 text-center lg:min-w-56"
+                              >See details</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-slide overflow-hidden max-sm:bg-secondary"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                      >
+                        <img
+                          src="./assets/images/course-react.png"
+                          alt=""
+                          class="aspect-square w-full lg:w-[345px]"
+                        />
+
+                        <!-- start info -->
+                        <div
+                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                        >
+                          <!-- title -->
+                          <div
+                            class="flex w-full flex-col items-start justify-between gap-3"
+                          >
+                            <div
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                >Frontend</span
+                              >
+                              <p
+                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                              >
+                                ReactJS
+                              </p>
+                            </div>
+
+                            <div
+                              class="hidden items-center justify-start gap-3 lg:flex"
+                            >
+                              <img
+                                src="./assets/images/avt.jpg"
+                                alt="Avatar"
+                                class="aspect-square w-8 overflow-hidden rounded-full object-cover object-top lg:w-10"
+                              />
+                              <p
+                                class="typo-semibold mt-1 text-base text-secondary"
+                              >
+                                Jane Cooper
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- time -->
+                          <div
+                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                          >
+                            <div
+                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Opening day</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                28/02/2023
+                              </p>
+                            </div>
+                            <div
+                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Learning form</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                Offline
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- btn -->
+                          <div
+                            class="flex w-full flex-col items-center justify-between gap-3 text-center lg:flex-row"
+                          >
+                            <a
+                              href=""
+                              class="cus-button-primary min-w-full basis-1/2 lg:min-w-56"
+                              >Register for school</a
+                            ><a
+                              href=""
+                              class="cus-button-secondary px-auto min-w-full basis-1/2 text-center lg:min-w-56"
+                              >See details</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-slide overflow-hidden max-sm:bg-secondary"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                      >
+                        <img
+                          src="./assets/images/course-react.png"
+                          alt=""
+                          class="aspect-square w-full lg:w-[345px]"
+                        />
+
+                        <!-- start info -->
+                        <div
+                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                        >
+                          <!-- title -->
+                          <div
+                            class="flex w-full flex-col items-start justify-between gap-3"
+                          >
+                            <div
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                >Frontend</span
+                              >
+                              <p
+                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                              >
+                                ReactJS
+                              </p>
+                            </div>
+
+                            <div
+                              class="hidden items-center justify-start gap-3 lg:flex"
+                            >
+                              <img
+                                src="./assets/images/avt.jpg"
+                                alt="Avatar"
+                                class="aspect-square w-8 overflow-hidden rounded-full object-cover object-top lg:w-10"
+                              />
+                              <p
+                                class="typo-semibold mt-1 text-base text-secondary"
+                              >
+                                Jane Cooper
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- time -->
+                          <div
+                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                          >
+                            <div
+                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Opening day</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                28/02/2023
+                              </p>
+                            </div>
+                            <div
+                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                            >
+                              <span
+                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                >Learning form</span
+                              >
+                              <p class="caption-semibold text-lg text-primary">
+                                Offline
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- btn -->
+                          <div
+                            class="flex w-full flex-col items-center justify-between gap-3 text-center lg:flex-row"
+                          >
+                            <a
+                              href=""
+                              class="cus-button-primary min-w-full basis-1/2 lg:min-w-56"
+                              >Register for school</a
+                            ><a
+                              href=""
+                              class="cus-button-secondary px-auto min-w-full basis-1/2 text-center lg:min-w-56"
+                              >See details</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
           <!--End coming-soon-->
 
-          <section id="all-courses " class="mx-padding-page bg-secondary p-12 mt-gutter-section-md">
-            <div class="flex items-start justify-between gap-16">
+          <section
+            id="all-courses "
+            class="mx-padding-page-mobile mt-gutter-section-md p-padding-page-mobile lg:mx-padding-page lg:bg-secondary lg:p-12"
+          >
+            <div
+              class="flex flex-col items-start justify-between gap-16 lg:flex-row"
+            >
               <div class="item basis-1/2">
-                <div class="mb-7 text-left">
+                <div class="mb-7 text-center lg:ml-5 lg:text-left">
                   <h4 class="caption-semibold text-4xl text-primary">
                     All Courses
                   </h4>
-                  <p class="typo-semibold text-secondary">
+                  <p
+                    class="typo-regular lg:typo-semibold mt-2 line-clamp-4 text-justify text-base text-secondary"
+                  >
                     Including courses on design and frontend such as: Frontend
                     Newbie, Frontend Master, Web Responsive, React JS Master,
                     Graphic Design,...
                   </p>
                 </div>
-                <div class="flex flex-col items-start justify-between gap-32 ml-[-1.25rem]">
+                <div
+                  class="-mx-5 flex flex-col items-start justify-between gap-12 lg:mx-0 lg:gap-32"
+                >
                   <my-course
                     type="Game"
                     author="Jane Cooper"
@@ -101,7 +568,7 @@
                     title="Unity"
                     avtImg="./assets/images/avt.jpg"
                     courseImg="./assets/images/course-react.png"
-                    class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
+                    class="transition-all duration-200 ease-in-out group-hover:drop-shadow-lg"
                   ></my-course>
 
                   <my-course
@@ -111,13 +578,14 @@
                     title="Unity"
                     avtImg="./assets/images/avt.jpg"
                     courseImg="./assets/images/course-react.png"
-                    class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
+                    class="transition-all duration-200 ease-in-out group-hover:drop-shadow-lg"
                   ></my-course>
                 </div>
               </div>
 
+              <!-- start all courses -->
               <div
-                class="flex basis-1/2 flex-col items-start justify-between gap-32 "
+                class="-mx-5 flex basis-1/2 flex-col items-start justify-between gap-16 lg:mx-0 lg:gap-32"
               >
                 <my-course
                   type="Game"
@@ -126,7 +594,7 @@
                   title="Unity"
                   avtImg="./assets/images/avt.jpg"
                   courseImg="./assets/images/course-react.png"
-                  class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
+                  class="transition-all duration-200 ease-in-out group-hover:drop-shadow-lg"
                 ></my-course>
 
                 <my-course
@@ -136,23 +604,93 @@
                   title="Unity"
                   avtImg="./assets/images/avt.jpg"
                   courseImg="./assets/images/course-react.png"
-                  class="group-hover:drop-shadow-lg transition-all duration-200 ease-in-out"
+                  class="transition-all duration-200 ease-in-out group-hover:drop-shadow-lg"
                 ></my-course>
               </div>
             </div>
-            <div class="w-full h-6">
-              <btn href="#" class="cus-button-secondary float-right">View all</btn>
+
+            <div class="mt-4 h-6 w-full">
+              <btn
+                href="#"
+                class="cus-button-secondary w-full lg:float-right lg:w-fit"
+                >View all</btn
+              >
             </div>
           </section>
           <!--End all-courses-->
 
-          <section class="thumb"></section>
+          <section
+            id="AC-team"
+            class="mx-padding-page-mobile mt-gutter-section-md lg:mx-padding-page"
+          >
+            <div class="swiper">
+              <div
+                class="flex flex-col items-center justify-between gap-8 lg:flex-row"
+              >
+                <div class="basis-1/2 text-center lg:text-left">
+                  <h5
+                    class="caption-semibold text-3xl text-primary lg:text-4xl"
+                  >
+                    Appscyclone <span class="text-main">Team</span>
+                  </h5>
+                  <p class="mt-4 text-justify text-secondary">
+                    A team of enthusiastic instructors and mentors with a lot of
+                    experience accumulated from practical projects will
+                    accompany you throughout your learning process and career
+                    development path.
+                  </p>
+                </div>
+                <div class="flex h-28 basis-1/2 items-center justify-end gap-2">
+                  <div class="slider-prev-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                      />
+                    </svg>
+                  </div>
+                  <div class="slider-next-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional required wrapper -->
+              <div
+                id="team-member-slider"
+                class="swiper-wrapper mt-36 lg:mt-20"
+              ></div>
+            </div>
+          </section>
           <!--End AC-team-->
 
-          <section id="special-value" class="bg-secondary mt-gutter-section-md">
-            <div class="mx-52 flex items-center justify-between gap-10 py-14">
+          <section id="special-value" class="mt-gutter-section-md bg-secondary">
+            <div
+              class="relative mx-padding-page-mobile flex flex-col items-start justify-between gap-10 py-14 lg:mx-padding-page lg:flex-row"
+            >
               <div
-                class="caption-semibold basis-1/2 text-[40px] leading-normal"
+                class="caption-semibold basis-1/2 text-center text-4xl leading-normal lg:text-left lg:text-[40px]"
               >
                 <p class="text-primary">
                   Special Value <br />
@@ -161,11 +699,13 @@
                 <img
                   src="./assets/images/special-value.png"
                   alt="Image"
-                  class="img"
+                  class="img absolute -left-5 top-5 lg:-left-60 lg:top-7"
                 />
               </div>
 
-              <div class="flex basis-1/2 flex-col items-start justify-between">
+              <div
+                class="mt-6 flex basis-1/2 flex-col items-start justify-between lg:mt-0"
+              >
                 <my-special-value
                   title="Real-life training program"
                   description="The learning curve at Appscycloneis straight to the point, close to the actual requirements, communicated from experienced and dedicated instructors."
@@ -187,35 +727,107 @@
           </section>
           <!--End special-value-->
 
-          <section id="student-evaluation" class=""></section>
+          <section
+            id="student-evaluation"
+            class="mx-padding-page-mobile mt-gutter-section-sm lg:mx-padding-page lg:mt-gutter-section-md"
+          >
+            <div
+              class="flex flex-col items-center justify-between gap-32 py-10 lg:flex-row"
+            >
+              <div
+                class="flex flex-col items-center justify-between lg:items-start"
+              >
+                <h5 class="caption-semibold text-3xl text-primary lg:text-4xl">
+                  Student <br />Evaluations
+                </h5>
+                <!-- navigate btn -->
+                <div
+                  class="mt-7 flex basis-1/2 items-center justify-center gap-2"
+                >
+                  <div class="slider-prev-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                      />
+                    </svg>
+                  </div>
+                  <div class="slider-next-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- start evaluation-slider -->
+            </div>
+          </section>
           <!--End student-evaluation-->
 
-          <section id="asked-question " class="thumb mt-gutter-section-md relative overflow-hidden">
-            <img src="./assets/images/faqs-left.png" alt="Vector" class="absolute -left-5 bottom-96 scale-90">
-            <img src="./assets/images/faqs-right.png" alt="Vector" class="absolute -right-4 bottom-96 scale-90">
+          <section
+            id="asked-question "
+            class="thumb relative mt-gutter-section-md overflow-hidden"
+          >
+            <img
+              src="./assets/images/faqs-left.png"
+              alt="Vector"
+              class="absolute -left-24 bottom-28 scale-50 lg:-left-5 lg:bottom-96 lg:scale-90"
+            />
+            <img
+              src="./assets/images/faqs-right.png"
+              alt="Vector"
+              class="bottom-46 absolute -right-14 scale-50 lg:-right-4 lg:bottom-96 lg:scale-90"
+            />
 
-            <div class="px-padding-page w-full flex items-start justify-between relative">
-              <h5 class="caption-semibold basis-2/5 mt-4 text-4xl leading-normal text-primary">
-                Frequently <br>Asked Questions
+            <!-- start content -->
+            <div
+              class="relative flex w-full flex-col items-start justify-between px-padding-page-mobile lg:flex-row lg:px-padding-page"
+            >
+              <h5
+                class="caption-semibold mx-auto mt-4 basis-2/5 text-center text-3xl leading-normal text-primary lg:mx-0 lg:text-left lg:text-4xl"
+              >
+                Frequently <br />Asked Questions
               </h5>
-              <ul class="basis-3/5">
+              <ul class="mt-6 basis-3/5 lg:mt-0">
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                      <p class="mt-2 text-secondary"></p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nullam uto lectus molestie malesuada vitae vel purus.
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam uto lectus molestie malesuada vitae vel purus.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -223,32 +835,34 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                      <p class="mt-2 text-secondary"></p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nullam uto lectus molestie malesuada vitae vel purus.
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam uto lectus molestie malesuada vitae vel purus.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -256,32 +870,34 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                      <p class="mt-2 text-secondary"></p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nullam uto lectus molestie malesuada vitae vel purus.
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam uto lectus molestie malesuada vitae vel purus.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -289,32 +905,34 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                      <p class="mt-2 text-secondary"></p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nullam uto lectus molestie malesuada vitae vel purus.
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                      <p class="mt-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam uto lectus molestie malesuada vitae vel purus.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -322,46 +940,70 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
               </ul>
-              
             </div>
 
-            <div class="mx-auto mt-64 text-center">
-              <h5 class="caption-semibold text-4xl  z-40 text-primary">
+            <div class="mx-auto mt-32 text-center lg:mt-64">
+              <h5
+                class="caption-semibold z-40 text-3xl text-primary lg:text-4xl"
+              >
                 Appscyclone is a team
               </h5>
-              <span class="typo-regular text-base mb-11 text-secondary"
+              <span class="typo-regular mb-11 mt-1 text-base text-secondary"
                 >Everyone for one, one for all</span
               ><img src="./assets/images/AC-team.png" alt="Apps Cyclone Team" />
-            </div>         
+            </div>
           </section>
           <!--End asked-question-->
-          
-          <section id="references" class="w-full py-48 bg-tertiary text-center">
-            <div class="w-1/2 mx-auto">
-              <h4 class="caption-semibold text-white text-4xl">Become a Part of Appscyclone</h4>
-              <p class="text-secondary mt-6 mb-10">We are very happy that you decided to become a part of <strong> Appscyclone </strong> to learn, spread and share valuable experiences to the community.</p>
-              <div class="flex justify-center items-center gap-4">
-                <a href="#" class="cus-button-primary bg-primary text-primary hover:text-white">Join the Course</a>
-                <a href="#" class="cus-button-secondary text-white hover:bg-main">Teaching/Partner</a>
+
+          <section
+            id="references"
+            class="w-full bg-tertiary py-32 text-center lg:py-48"
+          >
+            <div class="mx-auto px-padding-page-mobile lg:w-1/2 lg:px-0">
+              <h4 class="caption-semibold text-3xl text-white lg:text-4xl">
+                Become a Part of Appscyclone
+              </h4>
+              <p class="mb-10 mt-6 text-secondary">
+                We are very happy that you decided to become a part of
+                <strong> Appscyclone </strong> to learn, spread and share
+                valuable experiences to the community.
+              </p>
+              <div
+                class="flex flex-col items-center justify-center gap-4 lg:flex-row"
+              >
+                <a
+                  href="#"
+                  class="cus-button-primary min-w-56 bg-primary text-primary hover:text-white"
+                  >Join the Course</a
+                >
+                <a
+                  href="#"
+                  class="cus-button-secondary min-w-56 text-white hover:bg-main"
+                  >Teaching/Partner</a
+                >
               </div>
             </div>
-          </section> <!--End reference-->
+          </section>
+          <!--End reference-->
         </main>
         <!-- End main-->
 
         <my-footer></my-footer>
+
         <!-- End footer-->
       </div>
     </div>
+
+    <script src="./assets/js/team-slider.js" type="text/javascript"></script>
   </body>
 </html>

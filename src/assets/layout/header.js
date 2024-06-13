@@ -9,11 +9,7 @@ class MyHeader extends HTMLElement {
           class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary  px-5 pb-2 pt-4 lg:px-padding-page"
         >
           <a href="index.html">
-            <img
-              src="./assets/icons/logo-goto.svg"
-              alt="Logo"
-              class="h-8 w-44"
-            />
+            <img src="./assets/icons/logo-goto.svg" alt="Logo" class="h-8 w-44"/>
           </a>
 
           <ul
@@ -40,7 +36,7 @@ class MyHeader extends HTMLElement {
             </li>
             <li
               class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold lg:hidden"
-              id="header-menu-close-icon"
+              
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +45,7 @@ class MyHeader extends HTMLElement {
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="size-6"
+                id="header-menu-close-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -59,7 +56,7 @@ class MyHeader extends HTMLElement {
             </li>
           </ul>
 
-          <div class="cursor-pointer lg:hidden">
+          <div class="cursor-pointer lg:hidden" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

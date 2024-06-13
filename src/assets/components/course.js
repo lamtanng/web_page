@@ -13,7 +13,7 @@ class MyCourse extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-        <div class="course p-5 ">
+        <div class="course p-5 bg-secondary ">
                   <a href="${this.courseDetailsUrl}" class="">
                     <img
                       src="${this.courseImg}"
@@ -24,12 +24,14 @@ class MyCourse extends HTMLElement {
                   <div
                     class="mt-6 flex flex-col items-start justify-between gap-2"
                   >
-                    <span class="typo-regular uppercase text-secondary"
+                  <div class="flex flex-row-reverse gap-2 lg:flex-col justify-between items-center lg:items-start w-full">
+                    <span class="typo-regular text-sm lg:text-base uppercase text-secondary"
                       >${this.type}</span
                     >
-                    <a href="#" class="caption-semibold text-2xl text-primary">
+                    <a href="#" class="caption-semibold text-xl line-clamp-1 lg:line-clamp-2 lg:text-2xl text-primary">
                       ${this.title}
                     </a>
+                  </div>
                     <div class="flex w-full items-center justify-between">
                       <div class="flex items-center justify-between gap-3">
                         <div
