@@ -27,7 +27,7 @@
     ></script>
   </head>
   <body>
-    <div class="root">
+    <div class="root overflow-hidden">
       <div
         class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
       >
@@ -35,27 +35,35 @@
         <!-- End header -->
 
         <main
-          class="mx-auto mb-gutter-section-md mt-[theme(height.header)] max-w-screen-md"
+          class="mx-auto mb-gutter-section-sm mt-[theme(height.header)] max-w-screen-md"
         >
-          <section id="register-course" class="py-8">
+          <section
+            id="register-course"
+            class="px-padding-page-mobile py-8 md:max-lg:px-padding-page-tablet"
+          >
             <form action="#">
-              <h3 class="caption-semibold text-4xl capitalize">
+              <h3
+                class="caption-semibold text-center text-2xl capitalize md:text-left md:text-4xl"
+              >
                 Register for the Course
               </h3>
               <div
-                class="mt-8 flex flex-col items-center justify-between gap-10"
+                class="mt-8 flex flex-col items-center justify-between gap-5 md:gap-10"
               >
-                <div class="flex w-full items-center justify-between gap-8">
-                  <div class="basis-1/2">
+                <div
+                  class="flex w-full flex-col items-center justify-between gap-5 md:flex-row"
+                >
+                  <div class="w-full basis-1/2">
                     <my-input
                       type="text"
                       my_id="name"
                       title="Name"
                       placeholder="Enter your name"
                       autocomplete="name"
+                      required
                     ></my-input>
                   </div>
-                  <div class="basis-1/2">
+                  <div class="w-full basis-1/2">
                     <my-input
                       type="email"
                       my_id="email"
@@ -66,8 +74,10 @@
                   </div>
                 </div>
 
-                <div class="flex w-full items-center justify-between gap-8">
-                  <div class="basis-1/2">
+                <div
+                  class="flex w-full flex-col items-center justify-between gap-5 md:flex-row"
+                >
+                  <div class="w-full basis-1/2">
                     <my-input
                       type="tel"
                       my_id="phone"
@@ -76,14 +86,25 @@
                       autocomplete="phone"
                     ></my-input>
                   </div>
-                  <div class="basis-1/2">
-                    <my-input
-                      type="phone"
-                      my_id="email"
-                      title="Email"
-                      placeholder="Enter your email"
-                      autocomplete="Email"
-                    ></my-input>
+                  <div class="w-full basis-1/2">
+                    <label
+                      for="learning-form"
+                      class="typo-semibold cursor-pointer text-base text-primary"
+                      >Learning form</label
+                    >
+                    <select
+                      id="learning-form"
+                      name="learning-form"
+                      autocomplete="country-name"
+                      class="cus-input"
+                    >
+                      <option class="typo-regular text-base text-primary">
+                        Learn online
+                      </option>
+                      <option class="typo-regular text-base text-primary">
+                        Learn offline
+                      </option>
+                    </select>
                   </div>
                 </div>
 
@@ -102,14 +123,13 @@
                     type="text"
                     my_id="person-opt"
                     title="Personal opinion"
-                    placeholder="Enter your facebook URL"
-                    autocomplete="www.facebook.com"
+                    isTextArea
                   ></my-input>
                 </div>
                 <button
                   type="submit"
                   id="registered-btn"
-                  class="cus-button-primary w-full"
+                  class="cus-button-primary mt-3 w-full"
                 >
                   Confirm
                 </button>

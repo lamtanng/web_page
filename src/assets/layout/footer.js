@@ -5,10 +5,12 @@ class MyFooter extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <footer class="mx-padding-page-mobile lg:mx-padding-page">
-          <div class="flex flex-col text-center lg:text-left gap-10 lg:flex-row items-center lg:items-start justify-between pt-20">
+      <footer class="mx-padding-page-mobile md:m-padding-page-tablet lg:mx-padding-page">
+          <div
+            class="flex flex-col items-center justify-between gap-10 pt-20 text-center md:flex-row md:items-start md:text-left"
+          >
             <div
-              class="flex basis-2/4 flex-col items-center lg:items-start justify-between gap-3 lg:gap-4"
+              class="flex basis-2/4 flex-col items-center justify-between gap-3 md:items-start md:gap-5"
             >
               <a href="index.html" class="">
                 <img
@@ -18,15 +20,15 @@ class MyFooter extends HTMLElement {
                   loading="lazy"
                 />
               </a>
-              <h4 class="caption-semibold text-2xl lg:text-3xl text-primary">
+              <h4 class="caption-semibold text-2xl text-primary md:text-3xl">
                 Wanna learn with us? <br />
                 Get in touch
               </h4>
-              <a href="" class="cus-button-primary w-full">Registered</a>
+              <a href="" class="cus-button-primary max-sm:w-full">Registered</a>
             </div>
 
             <div
-              class="flex basis-1/4 flex-col items-center lg:items-start justify-between gap-4"
+              class="flex basis-1/4 flex-col items-center justify-between gap-4 md:items-start"
             >
               <h4 class="caption-semibold text-lg text-primary">Navigation</h4>
               <div class="">
@@ -34,7 +36,9 @@ class MyFooter extends HTMLElement {
                   <p class="typo-semibold text-base text-secondary">Home</p>
                 </a>
                 <a href="#">
-                  <p class="typo-semibold mt-2 lg:mt-3 text-base text-secondary">
+                  <p
+                    class="typo-semibold mt-2 text-base text-secondary md:mt-3"
+                  >
                     Course
                   </p>
                 </a>
@@ -42,7 +46,7 @@ class MyFooter extends HTMLElement {
             </div>
 
             <div
-              class="flex basis-1/4 flex-col items-center lg:items-start justify-between gap-3 lg:gap-4"
+              class="flex basis-1/4 flex-col items-center justify-between gap-3 md:items-start md:gap-4"
             >
               <h4 class="caption-semibold text-lg text-primary">Head Office</h4>
               <a href="#">
@@ -64,10 +68,10 @@ class MyFooter extends HTMLElement {
               </div>
             </div>
           </div>
-          <p class="py-12 text-secondary text-center lg:text-left">
+          <p class="py-12 text-center text-secondary lg:text-left">
             Copyright © 2023. All rights reserved.
           </p>
-        </footer>    
+        </footer>
     `;
   }
 }

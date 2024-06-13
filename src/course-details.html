@@ -37,7 +37,7 @@
         <!-- End header -->
 
         <main
-          class="mb-gutter-section-sm mt-[theme(height.header)] px-padding-page-mobile lg:mb-gutter-section-md lg:px-padding-page"
+          class="md:px-padding-page-tablet mb-gutter-section-sm mt-[theme(height.header)] px-padding-page-mobile lg:mb-gutter-section-md lg:px-padding-page"
         >
           <section
             class="flex flex-col-reverse items-center justify-between gap-4 bg-secondary pb-6 md:flex-row md:items-start md:gap-8 md:p-8"
@@ -112,9 +112,9 @@
                   </p>
                 </div>
                 <p
-                  class="caption-semibold text-xl uppercase text-main md:text-base"
+                  class="caption-semibold text-xl uppercase text-main md:mt-3 md:text-base"
                 >
-                  11114.500.000 vnđ
+                  4.500.000 vnđ
                 </p>
               </div>
 
@@ -621,7 +621,7 @@
               Required requirements
             </p>
             <div
-              class="mx-auto mt-6 flex flex-col items-start justify-between gap-6 text-justify md:px-64"
+              class="mx-auto mt-6 flex flex-col items-start justify-between gap-6 text-justify md:px-44 lg:px-64"
             >
               <div class="flex items-start justify-start gap-4">
                 <img
@@ -775,7 +775,7 @@
               >
                 Frequently <br />Asked Questions
               </h5>
-              <ul class="basis-3/5 mt-3">
+              <ul class="mt-3 basis-3/5">
                 <li
                   id="faq"
                   class="toggle flex items-start justify-between gap-10 px-4 py-2 hover:bg-secondary md:px-10 md:py-8"
@@ -817,7 +817,6 @@
                 <li
                   id="faq"
                   class="toggle flex items-start justify-between gap-10 px-4 py-2 hover:bg-secondary md:px-10 md:py-8"
-                  
                 >
                   <div
                     class="flex cursor-pointer flex-col items-start justify-between"
@@ -856,8 +855,6 @@
                 <li
                   id="faq"
                   class="toggle flex items-start justify-between gap-10 px-4 py-2 hover:bg-secondary md:px-10 md:py-8"
-                 
-                  
                 >
                   <div
                     class="flex cursor-pointer flex-col items-start justify-between"
@@ -899,10 +896,14 @@
           <!-- End faqs -->
 
           <section class="mt-gutter-section-sm">
-            <h5 class="caption-semibold text-center md:text-left text-4xl capitalize text-primary">
+            <h5
+              class="caption-semibold text-center text-4xl capitalize text-primary md:text-left"
+            >
               Recommended Courses
             </h5>
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mt-5">
+            <div
+              class="mt-5 flex flex-col items-center justify-between gap-6 md:flex-row"
+            >
               <my-course
                 type="Game"
                 author="Jane Cooper"

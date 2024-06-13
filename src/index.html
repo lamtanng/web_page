@@ -55,7 +55,7 @@
         <main class="mt-[theme(height.header)]">
           <section
             id="thumbnal"
-            class="thumb relative flex h-screen items-center justify-start gap-4 overflow-hidden max-lg:flex-col lg:justify-between"
+            class="thumb relative flex h-screen items-center justify-start gap-4 max-lg:flex-col lg:justify-between"
           >
             <img
               src="./assets/images/thumb-left.png"
@@ -63,12 +63,14 @@
               class="aspect-auto w-4/5 self-center lg:w-[55%] lg:self-end"
             />
 
-            <div class="container px-padding-page-mobile max-lg:text-center">
+            <div
+              class="container px-padding-page-mobile max-lg:mt-2 max-lg:text-center"
+            >
               <div
                 class="mx-auto flex flex-col items-center justify-between gap-2 lg:items-start"
               >
                 <h1
-                  class="caption-semibold text-[40px] leading-normal text-primary lg:text-[64px] lg:leading-[76px]"
+                  class="caption-semibold text-[40px] leading-normal text-primary md:text-[64px] md:leading-[76px]"
                 >
                   Frontend Dev <br />
                   <span class="text-main">Training Center</span>
@@ -94,7 +96,7 @@
 
           <section
             id="coming-soon"
-            class="mx-padding-page-mobile mt-gutter-section-sm lg:ml-padding-page lg:mt-gutter-section-md"
+            class="md:ml-padding-page-tablet ml-padding-page-mobile mt-gutter-section-sm md:mt-gutter-section-md lg:ml-padding-page"
           >
             <div
               class="itemitems-center flex justify-between gap-5 max-sm:flex-col"
@@ -143,9 +145,13 @@
             </div>
 
             <!-- start slider -->
-            <div class="mt-8 overflow-hidden lg:ml-32 lg:mt-12">
-              <div class="relative lg:ml-40 lg:bg-secondary lg:py-16">
-                <div class="swiper-commingsoon relative lg:-left-16">
+            <div
+              class="mt-8 overflow-hidden md:ml-24 md:mt-10 lg:ml-32 lg:mt-12"
+            >
+              <div
+                class="relative md:ml-32 md:bg-secondary md:py-12 lg:ml-40 lg:py-16"
+              >
+                <div class="swiper-commingsoon relative md:-left-16">
                   <!-- start slider-wrapper -->
                   <div
                     id="coming-soon-slider"
@@ -155,38 +161,38 @@
                       class="swiper-slide overflow-hidden max-sm:bg-secondary"
                     >
                       <div
-                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 md:flex-row md:gap-8 lg:gap-14"
                       >
                         <img
                           src="./assets/images/course-react.png"
                           alt=""
-                          class="aspect-square w-full lg:w-[345px]"
+                          class="aspect-square w-full md:w-[345px]"
                         />
 
                         <!-- start info -->
                         <div
-                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                          class="flex w-full flex-col items-start justify-between gap-5 md:gap-8"
                         >
                           <!-- title -->
                           <div
                             class="flex w-full flex-col items-start justify-between gap-3"
                           >
                             <div
-                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 md:flex-col md:items-start"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                class="typo-regular md:typo-semibold text-sm uppercase text-secondary md:text-lg"
                                 >Frontend</span
                               >
                               <p
-                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                                class="caption-semibold text-3xl text-primary md:text-4xl"
                               >
                                 ReactJS
                               </p>
                             </div>
 
                             <div
-                              class="hidden items-center justify-start gap-3 lg:flex"
+                              class="hidden items-center justify-start gap-3 md:flex"
                             >
                               <img
                                 src="./assets/images/avt.jpg"
@@ -203,13 +209,13 @@
 
                           <!-- time -->
                           <div
-                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                            class="flex w-full items-center justify-between gap-8 md:justify-start md:gap-14"
                           >
                             <div
-                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                              class="flex flex-col items-start justify-start gap-1 md:gap-3"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                class="typo-regular md:typo-semibold text-base capitalize text-secondary"
                                 >Opening day</span
                               >
                               <p class="caption-semibold text-lg text-primary">
@@ -217,10 +223,10 @@
                               </p>
                             </div>
                             <div
-                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                              class="flex flex-col items-end justify-start gap-1 md:items-start md:gap-3"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                class="typo-regular md:typo-semibold w-full text-base capitalize text-secondary"
                                 >Learning form</span
                               >
                               <p class="caption-semibold text-lg text-primary">
@@ -250,38 +256,38 @@
                       class="swiper-slide overflow-hidden max-sm:bg-secondary"
                     >
                       <div
-                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 md:flex-row md:gap-8 lg:gap-14"
                       >
                         <img
                           src="./assets/images/course-react.png"
                           alt=""
-                          class="aspect-square w-full lg:w-[345px]"
+                          class="aspect-square w-full md:w-[345px]"
                         />
 
                         <!-- start info -->
                         <div
-                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                          class="flex w-full flex-col items-start justify-between gap-5 md:gap-8"
                         >
                           <!-- title -->
                           <div
                             class="flex w-full flex-col items-start justify-between gap-3"
                           >
                             <div
-                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 md:flex-col md:items-start"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                class="typo-regular md:typo-semibold text-sm uppercase text-secondary md:text-lg"
                                 >Frontend</span
                               >
                               <p
-                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                                class="caption-semibold text-3xl text-primary md:text-4xl"
                               >
                                 ReactJS
                               </p>
                             </div>
 
                             <div
-                              class="hidden items-center justify-start gap-3 lg:flex"
+                              class="hidden items-center justify-start gap-3 md:flex"
                             >
                               <img
                                 src="./assets/images/avt.jpg"
@@ -298,13 +304,13 @@
 
                           <!-- time -->
                           <div
-                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                            class="flex w-full items-center justify-between gap-8 md:justify-start md:gap-14"
                           >
                             <div
-                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                              class="flex flex-col items-start justify-start gap-1 md:gap-3"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                class="typo-regular md:typo-semibold text-base capitalize text-secondary"
                                 >Opening day</span
                               >
                               <p class="caption-semibold text-lg text-primary">
@@ -312,10 +318,10 @@
                               </p>
                             </div>
                             <div
-                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                              class="flex flex-col items-end justify-start gap-1 md:items-start md:gap-3"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                class="typo-regular md:typo-semibold w-full text-base capitalize text-secondary"
                                 >Learning form</span
                               >
                               <p class="caption-semibold text-lg text-primary">
@@ -345,38 +351,38 @@
                       class="swiper-slide overflow-hidden max-sm:bg-secondary"
                     >
                       <div
-                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
+                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 md:flex-row md:gap-8 lg:gap-14"
                       >
                         <img
                           src="./assets/images/course-react.png"
                           alt=""
-                          class="aspect-square w-full lg:w-[345px]"
+                          class="aspect-square w-full md:w-[345px]"
                         />
 
                         <!-- start info -->
                         <div
-                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
+                          class="flex w-full flex-col items-start justify-between gap-5 md:gap-8"
                         >
                           <!-- title -->
                           <div
                             class="flex w-full flex-col items-start justify-between gap-3"
                           >
                             <div
-                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
+                              class="flex w-full flex-row-reverse items-center justify-between gap-3 md:flex-col md:items-start"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
+                                class="typo-regular md:typo-semibold text-sm uppercase text-secondary md:text-lg"
                                 >Frontend</span
                               >
                               <p
-                                class="caption-semibold text-3xl text-primary lg:text-4xl"
+                                class="caption-semibold text-3xl text-primary md:text-4xl"
                               >
                                 ReactJS
                               </p>
                             </div>
 
                             <div
-                              class="hidden items-center justify-start gap-3 lg:flex"
+                              class="hidden items-center justify-start gap-3 md:flex"
                             >
                               <img
                                 src="./assets/images/avt.jpg"
@@ -393,13 +399,13 @@
 
                           <!-- time -->
                           <div
-                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
+                            class="flex w-full items-center justify-between gap-8 md:justify-start md:gap-14"
                           >
                             <div
-                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
+                              class="flex flex-col items-start justify-start gap-1 md:gap-3"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                class="typo-regular md:typo-semibold text-base capitalize text-secondary"
                                 >Opening day</span
                               >
                               <p class="caption-semibold text-lg text-primary">
@@ -407,105 +413,10 @@
                               </p>
                             </div>
                             <div
-                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
+                              class="flex flex-col items-end justify-start gap-1 md:items-start md:gap-3"
                             >
                               <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
-                                >Learning form</span
-                              >
-                              <p class="caption-semibold text-lg text-primary">
-                                Offline
-                              </p>
-                            </div>
-                          </div>
-
-                          <!-- btn -->
-                          <div
-                            class="flex w-full flex-col items-center justify-between gap-3 text-center lg:flex-row"
-                          >
-                            <a
-                              href=""
-                              class="cus-button-primary min-w-full basis-1/2 lg:min-w-56"
-                              >Register for school</a
-                            ><a
-                              href=""
-                              class="cus-button-secondary px-auto min-w-full basis-1/2 text-center lg:min-w-56"
-                              >See details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="swiper-slide overflow-hidden max-sm:bg-secondary"
-                    >
-                      <div
-                        class="flex flex-col items-center justify-start gap-4 px-4 py-3 lg:flex-row lg:gap-14"
-                      >
-                        <img
-                          src="./assets/images/course-react.png"
-                          alt=""
-                          class="aspect-square w-full lg:w-[345px]"
-                        />
-
-                        <!-- start info -->
-                        <div
-                          class="flex w-full flex-col items-start justify-between gap-5 lg:gap-8"
-                        >
-                          <!-- title -->
-                          <div
-                            class="flex w-full flex-col items-start justify-between gap-3"
-                          >
-                            <div
-                              class="flex w-full flex-row-reverse items-center justify-between gap-3 lg:flex-col lg:items-start"
-                            >
-                              <span
-                                class="typo-regular lg:typo-semibold text-sm uppercase text-secondary lg:text-lg"
-                                >Frontend</span
-                              >
-                              <p
-                                class="caption-semibold text-3xl text-primary lg:text-4xl"
-                              >
-                                ReactJS
-                              </p>
-                            </div>
-
-                            <div
-                              class="hidden items-center justify-start gap-3 lg:flex"
-                            >
-                              <img
-                                src="./assets/images/avt.jpg"
-                                alt="Avatar"
-                                class="aspect-square w-8 overflow-hidden rounded-full object-cover object-top lg:w-10"
-                              />
-                              <p
-                                class="typo-semibold mt-1 text-base text-secondary"
-                              >
-                                Jane Cooper
-                              </p>
-                            </div>
-                          </div>
-
-                          <!-- time -->
-                          <div
-                            class="flex w-full items-center justify-between gap-8 lg:justify-start lg:gap-14"
-                          >
-                            <div
-                              class="flex flex-col items-start justify-start gap-1 lg:gap-3"
-                            >
-                              <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
-                                >Opening day</span
-                              >
-                              <p class="caption-semibold text-lg text-primary">
-                                28/02/2023
-                              </p>
-                            </div>
-                            <div
-                              class="flex flex-col items-end justify-start gap-1 lg:items-start lg:gap-3"
-                            >
-                              <span
-                                class="typo-regular lg:typo-semibold text-base capitalize text-secondary"
+                                class="typo-regular md:typo-semibold w-full text-base capitalize text-secondary"
                                 >Learning form</span
                               >
                               <p class="caption-semibold text-lg text-primary">
@@ -540,10 +451,10 @@
 
           <section
             id="all-courses "
-            class="mx-padding-page-mobile mt-gutter-section-md p-padding-page-mobile lg:mx-padding-page lg:bg-secondary lg:p-12"
+            class="md:mx-padding-page-tablet mx-padding-page-mobile mt-gutter-section-md p-padding-page-mobile lg:mx-padding-page lg:bg-secondary lg:p-12"
           >
             <div
-              class="flex flex-col items-start justify-between gap-16 lg:flex-row"
+              class="flex flex-col items-start justify-between gap-16 md:flex-row"
             >
               <div class="item basis-1/2">
                 <div class="mb-7 text-center lg:ml-5 lg:text-left">
@@ -612,7 +523,7 @@
             <div class="mt-4 h-6 w-full">
               <btn
                 href="#"
-                class="cus-button-secondary w-full lg:float-right lg:w-fit"
+                class="cus-button-secondary w-full md:float-right md:w-fit"
                 >View all</btn
               >
             </div>
@@ -621,7 +532,7 @@
 
           <section
             id="AC-team"
-            class="mx-padding-page-mobile mt-gutter-section-md lg:mx-padding-page"
+            class="md:mx-padding-page-tablet mx-padding-page-mobile mt-gutter-section-md lg:mx-padding-page"
           >
             <div class="swiper">
               <div
@@ -629,7 +540,7 @@
               >
                 <div class="basis-1/2 text-center lg:text-left">
                   <h5
-                    class="caption-semibold text-3xl text-primary lg:text-4xl"
+                    class="caption-semibold text-3xl text-primary md:text-4xl"
                   >
                     Appscyclone <span class="text-main">Team</span>
                   </h5>
@@ -687,10 +598,10 @@
 
           <section id="special-value" class="mt-gutter-section-md bg-secondary">
             <div
-              class="relative mx-padding-page-mobile flex flex-col items-start justify-between gap-10 py-14 lg:mx-padding-page lg:flex-row"
+              class="md:mx-padding-page-tablet relative mx-padding-page-mobile flex flex-col items-start justify-between gap-10 py-14 lg:mx-padding-page lg:flex-row"
             >
               <div
-                class="caption-semibold basis-1/2 text-center text-4xl leading-normal lg:text-left lg:text-[40px]"
+                class="caption-semibold basis-1/2 text-center text-4xl leading-normal max-lg:mx-auto lg:text-left md:text-[40px]"
               >
                 <p class="text-primary">
                   Special Value <br />
@@ -699,12 +610,12 @@
                 <img
                   src="./assets/images/special-value.png"
                   alt="Image"
-                  class="img absolute -left-5 top-5 lg:-left-60 lg:top-7"
+                  class="img absolute -left-5 top-5 md:-left-60 md:top-24 lg:top-7"
                 />
               </div>
 
               <div
-                class="mt-6 flex basis-1/2 flex-col items-start justify-between lg:mt-0"
+                class="mt-6 flex basis-1/2 flex-col items-start justify-between md:mt-0"
               >
                 <my-special-value
                   title="Real-life training program"
@@ -729,7 +640,7 @@
 
           <section
             id="student-evaluation"
-            class="mx-padding-page-mobile mt-gutter-section-sm lg:mx-padding-page lg:mt-gutter-section-md"
+            class="md:mx-padding-page-tablet mx-padding-page-mobile mt-gutter-section-sm lg:mx-padding-page lg:mt-gutter-section-md"
           >
             <div
               class="flex flex-col items-center justify-between gap-32 py-10 lg:flex-row"
@@ -801,17 +712,17 @@
 
             <!-- start content -->
             <div
-              class="relative flex w-full flex-col items-start justify-between px-padding-page-mobile lg:flex-row lg:px-padding-page"
+              class="md:px-padding-page-tablet relative flex w-full flex-col items-start justify-between px-padding-page-mobile md:flex-row lg:px-padding-page"
             >
               <h5
-                class="caption-semibold mx-auto mt-4 basis-2/5 text-center text-3xl leading-normal text-primary lg:mx-0 lg:text-left lg:text-4xl"
+                class="caption-semibold mx-auto mt-4 basis-2/5 text-center text-3xl leading-normal text-primary md:mx-0 md:text-left md:text-4xl"
               >
                 Frequently <br />Asked Questions
               </h5>
-              <ul class="mt-6 basis-3/5 lg:mt-0">
+              <ul class="mt-6 basis-3/5 md:mt-0">
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
                 >
                   <div
                     class="flex cursor-pointer flex-col items-start justify-between"
@@ -846,7 +757,7 @@
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
                 >
                   <div
                     class="flex cursor-pointer flex-col items-start justify-between"
@@ -881,7 +792,7 @@
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
                 >
                   <div
                     class="flex cursor-pointer flex-col items-start justify-between"
@@ -916,7 +827,7 @@
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary lg:px-10 lg:py-8"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
                 >
                   <div
                     class="flex cursor-pointer flex-col items-start justify-between"
@@ -954,7 +865,7 @@
 
             <div class="mx-auto mt-32 text-center lg:mt-64">
               <h5
-                class="caption-semibold z-40 text-3xl text-primary lg:text-4xl"
+                class="caption-semibold z-40 text-3xl text-primary md:text-4xl"
               >
                 Appscyclone is a team
               </h5>
@@ -967,10 +878,10 @@
 
           <section
             id="references"
-            class="w-full bg-tertiary py-32 text-center lg:py-48"
+            class="w-full bg-tertiary py-32 text-center md:py-48"
           >
-            <div class="mx-auto px-padding-page-mobile lg:w-1/2 lg:px-0">
-              <h4 class="caption-semibold text-3xl text-white lg:text-4xl">
+            <div class="mx-auto px-padding-page-mobile md:w-1/2 md:px-0">
+              <h4 class="caption-semibold text-3xl text-white md:text-4xl">
                 Become a Part of Appscyclone
               </h4>
               <p class="mb-10 mt-6 text-secondary">
@@ -979,7 +890,7 @@
                 valuable experiences to the community.
               </p>
               <div
-                class="flex flex-col items-center justify-center gap-4 lg:flex-row"
+                class="flex flex-col items-center justify-center gap-4 md:flex-row"
               >
                 <a
                   href="#"

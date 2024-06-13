@@ -9,11 +9,15 @@ const swiper_comming_soon = new Swiper(".swiper-commingsoon", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 600,
+      spaceBetween: 85,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 200,
     },
     1200: {
       slidesPerView: 1,
-      spaceBetween: 85,
+      spaceBetween: 200,
     },
   },
   navigation: {
