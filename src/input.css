@@ -122,6 +122,11 @@
     @apply cus-tag__lecturer bg-secondary text-primary;
   }
 
+  /* input */
+  .cus-input {
+    @apply typo-semibold mt-1 block w-full rounded-md px-3.5 pb-3 pt-4 text-base leading-none text-primary outline-none ring-1 ring-inset ring-gray-300 transition duration-200 ease-in-out placeholder:font-normal placeholder:text-tertiary focus:shadow-sm focus:ring-1 focus:ring-inset focus:ring-main;
+  }
+
   /* silder paginated btn */
   .slider-navigated-btn {
     @apply max-w-fit cursor-pointer rounded-full border border-gray-900 bg-transparent p-3 transition-all duration-200 ease-in-out hover:border-main hover:bg-main hover:text-white;

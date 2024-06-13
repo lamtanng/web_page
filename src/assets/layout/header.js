@@ -6,14 +6,14 @@ class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
              <header
-          class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary  px-5 pb-2 pt-4 lg:px-padding-page"
+          class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary  px-5 pb-2 pt-4 lg:px-padding-page md:px-padding-page-tablet"
         >
           <a href="index.html">
-            <img src="./assets/icons/logo-goto.svg" alt="Logo" class="h-8 w-44"/>
+            <img src="./assets/icons/logo-goto.svg" alt="Logo" class="w-44 scale-x-110"/>
           </a>
 
           <ul
-            class="button-semibold hidden text-primary lg:flex lg:items-center lg:justify-between lg:gap-6"
+            class="button-semibold hidden text-primary md:flex md:items-center md:justify-between md:gap-6"
             id="header-menu"
             role="list"
           >
@@ -31,11 +31,11 @@ class MyHeader extends HTMLElement {
                 >Course</a
               >
             </li>
-            <li class="ml-4">
+            <li class="ml-4 mb-[2px]">
               <a href="registered.html" class="cus-button-primary">Registered</a>
             </li>
             <li
-              class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold lg:hidden"
+              class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold md:hidden"
               
             >
               <svg
@@ -56,7 +56,7 @@ class MyHeader extends HTMLElement {
             </li>
           </ul>
 
-          <div class="cursor-pointer lg:hidden" >
+          <div class="cursor-pointer md:hidden" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

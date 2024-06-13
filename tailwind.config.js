@@ -86,6 +86,7 @@ module.exports = {
       spacing: {
         "padding-page": "13rem",
         "padding-page-mobile": "1.25rem",
+        "padding-page-tablet": "3.75rem",
         "gutter-section-sm": "6.5rem",
         "gutter-section-md": "10rem",
       },
