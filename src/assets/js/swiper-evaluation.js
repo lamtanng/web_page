@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const swiper_evaluation = new Swiper(".swiper-evaluation-st", {
   direction: "horizontal",
   loop: false,
   grabCursor: true,
@@ -9,15 +9,11 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 600,
     },
     1200: {
-      slidesPerView: 4,
-      spaceBetween: 25,
+      slidesPerView: 1,
+      spaceBetween: 20,
     },
   },
   navigation: {
@@ -25,13 +21,8 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".slider-prev-btn",
     disabledClass: "is-disable-btn",
   },
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter: true,
-  },
-  on: {
-    click: function () {
-      swiper.slideTo(this.clickedIndex);
-    },
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   pauseOnMouseEnter: true,
+  // },
 });

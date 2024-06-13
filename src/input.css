@@ -86,10 +86,10 @@
 
   /* custom style */
   .cus-button-primary {
-    @apply button-semibold inline-block rounded-full bg-tertiary px-10 pb-3 pt-4 text-white transition-all duration-300 ease-in-out hover:bg-main;
+    @apply button-semibold inline-block cursor-pointer rounded-full bg-tertiary px-10 pb-3 pt-4 text-center text-white transition-all duration-300 ease-in-out hover:bg-main;
   }
   .cus-button-secondary {
-    @apply button-semibold inline-block rounded-3xl border border-current bg-transparent px-10 pb-2 pt-3 text-primary transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-white;
+    @apply button-semibold inline-block cursor-pointer rounded-3xl border border-current bg-transparent px-10 pb-2.5 pt-3.5 text-center text-primary transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-white;
   }
   .cus-btn-filter {
     @apply button-semibold min-w-[130px] bg-secondary px-5 py-3 text-center leading-none text-primary hover:bg-gray-200;
@@ -107,12 +107,29 @@
     @apply bg-main;
   }
   .is-disable-btn {
-    @apply cursor-default bg-secondary text-secondary hover:bg-secondary hover:text-secondary;
+    @apply !cursor-default !border-none !bg-secondary !text-disable hover:!bg-secondary hover:!text-disable;
   }
   .is-active-FAQ {
     @apply transition-max_height duration-300 ease-in-out;
   }
   .header-menu__expanded {
     @apply absolute left-0 top-0 z-50 flex h-screen w-full animate-slideDown flex-col items-center justify-center gap-4 bg-main text-2xl font-medium text-white;
+  }
+  .cus-tag__lecturer {
+    @apply typo-regular absolute right-3 top-3 bg-main px-4 pb-1.5 pt-2.5 text-white;
+  }
+  .cus-tag__mentor {
+    @apply cus-tag__lecturer bg-secondary text-primary;
+  }
+
+  /* silder paginated btn */
+  .slider-navigated-btn {
+    @apply max-w-fit cursor-pointer rounded-full border border-gray-900 bg-transparent p-3 transition-all duration-200 ease-in-out hover:border-main hover:bg-main hover:text-white;
+  }
+  .slider-prev-btn {
+    @apply slider-navigated-btn;
+  }
+  .slider-next-btn {
+    @apply slider-navigated-btn;
   }
 }

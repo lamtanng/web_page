@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const swiper_comming_soon = new Swiper(".swiper-commingsoon", {
   direction: "horizontal",
   loop: false,
   grabCursor: true,
@@ -9,15 +9,11 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 600,
     },
     1200: {
-      slidesPerView: 4,
-      spaceBetween: 25,
+      slidesPerView: 1,
+      spaceBetween: 85,
     },
   },
   navigation: {
@@ -26,12 +22,13 @@ const swiper = new Swiper(".swiper", {
     disabledClass: "is-disable-btn",
   },
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     pauseOnMouseEnter: true,
   },
   on: {
     click: function () {
-      swiper.slideTo(this.clickedIndex);
+      console.log("clicked");
+      // swiper.slideTo(this.clickedIndex);
     },
   },
 });

@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
     <title>Course Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/layout/footer.js" type="module" defer></script>
     <script src="./assets/layout/header.js" type="module" defer></script>
     <script src="./assets/components/faqs.js" type="module" async></script>
-    <script src="./assets/components/special-value.js" type="module" async></script>
+    <script src="./assets/components/lecturer.js" type="module" async></script>
+    <script
+      src="./assets/components/special-value.js"
+      type="module"
+      async
+    ></script>
     <script src="./assets/components/course.js" type="module" async></script>
     <script src="./assets/js/toggle.js" type="text/javascript" async></script>
+    <script src="./assets/js/swiper.js" type="text/javascript" async></script>
     <script
       src="./assets/js/asked-question-toggle.js"
       type="module"
@@ -18,59 +29,103 @@
     ></script>
   </head>
   <body>
-    <div class="root">
+    <div class="root overflow-hidden">
       <div
         class="content-wrapper relative mx-auto max-w-screen-2xl bg-primary font-centra text-base"
       >
         <my-header></my-header>
         <!-- End header -->
 
-        <main class="mt-[theme(height.header)] px-padding-page mb-gutter-section-md">
+        <main
+          class="mb-gutter-section-sm mt-[theme(height.header)] px-padding-page-mobile lg:mb-gutter-section-md lg:px-padding-page"
+        >
           <section
-            class="cover flex items-start justify-between gap-8 bg-secondary p-8"
+            class="flex flex-col-reverse items-center justify-between gap-4 bg-secondary pb-6 md:flex-row md:items-start md:gap-8 md:p-8"
           >
-            <div class="max-w-[50%] basis-1/2 break-words">
+            <!-- info -->
+            <div
+              class="w-full basis-1/2 break-words px-6 text-center md:max-w-[50%] md:px-0 md:text-left"
+            >
               <p class="uppercase text-secondary">Frontend</p>
-              <h3 class="caption-semibold mt-10 text-6xl capitalize">
+              <h3
+                class="caption-semibold mt-4 text-4xl capitalize text-primary md:mt-10 md:text-6xl"
+              >
                 ReactJS
               </h3>
-              <div class="mt-5 flex items-start justify-between">
+
+              <!-- time -->
+              <div
+                class="mt-5 flex flex-col items-center justify-between gap-2 text-center md:flex-row md:items-start md:text-left"
+              >
                 <div class="basis-1/3">
-                  <p class="typo-semibold text-secondary">Opening day</p>
-                  <p class="caption-semibold mt-3 text-base text-primary">
+                  <p
+                    class="typo-regular md:typo-semibold text-base text-secondary"
+                  >
+                    Opening day
+                  </p>
+                  <p
+                    class="caption-semibold mt-[2px] text-base text-primary md:mt-3"
+                  >
                     28/02/2023
                   </p>
                 </div>
                 <div class="basis-1/3">
-                  <p class="typo-semibold text-secondary">Time limit</p>
-                  <p class="caption-semibold mt-3 text-base text-primary">
+                  <p
+                    class="typo-regular md:typo-semibold text-base text-secondary"
+                  >
+                    Time limit
+                  </p>
+                  <p
+                    class="caption-semibold mt-[2px] text-base text-primary md:mt-3"
+                  >
                     45 spells
                   </p>
                 </div>
                 <div class="basis-1/3">
-                  <p class="typo-semibold text-secondary">Learning form</p>
-                  <p class="caption-semibold mt-3 text-base text-primary">
+                  <p
+                    class="typo-regular md:typo-semibold text-base text-secondary"
+                  >
+                    Learning form
+                  </p>
+                  <p
+                    class="caption-semibold mt-[2px] text-base text-primary md:mt-3"
+                  >
                     Offline
                   </p>
                 </div>
               </div>
-              <div class="mt-5 flex items-center justify-between bg-white p-6">
+
+              <!-- price -->
+              <div
+                class="mt-5 flex w-full flex-col items-center justify-between gap-4 bg-white p-3 md:flex-row md:items-start md:p-6"
+              >
                 <div class="flex items-center justify-start gap-4">
                   <img
                     src="./assets/images/avt.jpg"
                     alt="author-avatar"
-                    class="aspect-square w-10 overflow-hidden rounded-full object-cover object-center"
+                    class="aspect-square w-10 overflow-hidden rounded-full object-cover object-top"
                   />
-                  <p class="typo-semibold capitalize text-secondary">
+                  <p
+                    class="typo-semibold mt-1 text-base capitalize text-secondary"
+                  >
                     Jone Cooper
                   </p>
                 </div>
-                <p class="caption-semibold uppercase text-primary">
+                <p
+                  class="caption-semibold text-xl uppercase text-main md:text-base"
+                >
                   11114.500.000 vnđ
                 </p>
               </div>
-              <a href="#" class="cus-button-primary mt-5 px-12">Register</a>
+
+              <a
+                href="#"
+                class="cus-button-primary mt-8 px-12 max-sm:w-full md:mt-6"
+                >Register</a
+              >
             </div>
+
+            <!-- cover img -->
             <div class="basis-1/2">
               <img src="./assets/images/course-react.png" alt="Course cover" />
             </div>
@@ -78,13 +133,17 @@
           <!-- End cover -->
 
           <section
-            class="flex flex-col items-start justify-between gap-14 mt-gutter-section-sm"
+            class="mt-gutter-section-sm flex flex-col items-start justify-between gap-14"
           >
-            <div class="flex items-center justify-between gap-10">
+            <div
+              class="flex flex-col items-center justify-between gap-10 md:flex-row"
+            >
               <div class="basis-1/2">
-                <h5 class="caption-semibold text-4xl text-primary">Introduce</h5>
+                <h5 class="caption-semibold text-4xl text-primary">
+                  Introduce
+                </h5>
                 <p
-                  class="typo-regular mt-5 text-justify text-base text-secondary"
+                  class="typo-regular mt-5 text-wrap break-words text-justify text-base text-secondary"
                 >
                   This FRONTEND MASTER PROGRAMMING course is suitable for those
                   of you who are IT students or those who want to become a
@@ -98,12 +157,34 @@
                   basic to advanced of a Front-end Dev.
                 </p>
               </div>
-              
-              <iframe width="560" height="300" src="https://www.youtube.com/embed/Tn6-PIqc4UM?si=UUGmMEDTxvbztAQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              <iframe
+                class="basis-1/2"
+                width=""
+                height="300"
+                src="https://www.youtube.com/embed/Tn6-PIqc4UM?si=UUGmMEDTxvbztAQD"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
 
-            <div class="flex items-start justify-between gap-10">
-              <iframe width="560" height="300" src="https://www.youtube.com/embed/Tn6-PIqc4UM?si=UUGmMEDTxvbztAQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div
+              class="flex flex-col-reverse items-start justify-between gap-10 md:flex-row"
+            >
+              <iframe
+                class="basis-1/2"
+                width=""
+                height="300"
+                src="https://www.youtube.com/embed/Tn6-PIqc4UM?si=UUGmMEDTxvbztAQD"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
               <p
                 class="typo-regular basis-1/2 text-justify text-base leading-7 text-secondary"
               >
@@ -168,390 +249,494 @@
           </section>
           <!-- End scheduled -->
 
-          <section class="content mt-gutter-section-sm ">
-            <p class="caption-semibold text-4xl text-primary">Content</p>
-            <div class="flex items-start justify-between gap-8 mt-5">
+          <section class="content mt-gutter-section-sm">
+            <p
+              class="caption-semibold text-center text-4xl text-primary md:text-left"
+            >
+              Content
+            </p>
+            <div
+              class="mt-5 flex flex-col items-start justify-between gap-8 md:flex-row"
+            >
               <div class="basis-1/2">
                 <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
                       Overview, HTML, Photoshop, Chrome Dev Tool
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary">
-                          HTML knowledge. Write SEO-standard HTML
-                          <br>Photoshop
-                          <br>Chrome Dev Tools
-                        </p>
+                      <p class="mt-2 text-secondary">
+                        HTML knowledge. Write SEO-standard HTML
+                        <br />Photoshop <br />Chrome Dev Tools
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
+                  </div>
+                </li>
               </div>
               <div class="basis-1/2">
                 <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
-                  <li
-                    id="faq"
-                    class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  </div>
+                </li>
+                <li
+                  id="faq"
+                  class="toggle flex items-start justify-between gap-10 px-6 py-4 hover:bg-secondary md:px-10 md:py-8"
+                >
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
                   >
-                  <div class="cursor-pointer flex flex-col items-start justify-between">
                     <p class="caption-semibold text-base text-primary">
-                        Add commonly asked questions here
+                      Add commonly asked questions here
                     </p>
                     <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                        <p class="mt-2 text-secondary"></p>
+                      <p class="mt-2 text-secondary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam uto lectus molestie malesuada vitae vel purus.
-                        </p>
+                      </p>
                     </div>
-                    </div>
-                    <div class="icon">
+                  </div>
+                  <div class="icon">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 cursor-pointer"
-                        id="faq-toggle-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 cursor-pointer"
+                      id="faq-toggle-icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                        />
+                      />
                     </svg>
-                    </div>
-                  </li>
+                  </div>
+                </li>
               </div>
             </div>
-
           </section>
           <!-- End content -->
 
-          <section class="requirements mt-gutter-section-sm ">
-            <p class="caption-bold text-4xl text-primary text-center">Required requirements</p>
-            <div class="mt-6 flex flex-col items-start justify-between gap-6 px-64 mx-auto">
+          <section class="requirements mt-gutter-section-sm">
+            <p class="caption-bold text-center text-4xl text-primary">
+              Required requirements
+            </p>
+            <div
+              class="mx-auto mt-6 flex flex-col items-start justify-between gap-6 text-justify md:px-64"
+            >
               <div class="flex items-start justify-start gap-4">
-                <img src="./assets/images/checked.png" alt="checked" class="pb-1">
-                <p class="text-secondary typo-regular text-base ">Have a personal laptop, install Photoshop, VSCode software</p>
+                <img
+                  src="./assets/images/checked.png"
+                  alt="checked"
+                  class="pb-1"
+                />
+                <p class="typo-regular text-base text-secondary">
+                  Have a personal laptop, install Photoshop, VSCode software
+                </p>
               </div>
               <div class="flex items-start justify-start gap-4">
-                <img src="./assets/images/checked.png" alt="checked" class="pb-1">
-                <p class="text-secondary typo-regular text-base ">Minimize school breaks and complete assigned assignments</p>
+                <img
+                  src="./assets/images/checked.png"
+                  alt="checked"
+                  class="pb-1"
+                />
+                <p class="typo-regular text-base text-secondary">
+                  Minimize school breaks and complete assigned assignments
+                </p>
               </div>
               <div class="flex items-start justify-start gap-4">
-                <img src="./assets/images/checked.png" alt="checked" class="pb-1">
-                <p class="text-secondary typo-regular text-base ">Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage</p>
+                <img
+                  src="./assets/images/checked.png"
+                  alt="checked"
+                  class="pb-1"
+                />
+                <p class="typo-regular text-base text-secondary">
+                  Learned about the frontend learning route and basic knowledge
+                  of HTML and CSS is an advantage
+                </p>
               </div>
               <div class="flex items-start justify-start gap-4">
-                <img src="./assets/images/checked.png" alt="checked" class="pb-1">
-                <p class="text-secondary typo-regular text-base ">Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at homee</p>
+                <img
+                  src="./assets/images/checked.png"
+                  alt="checked"
+                  class="pb-1"
+                />
+                <p class="typo-regular text-base text-secondary">
+                  Appscyclone members must have a high sense of responsibility
+                  and initiative in learning, as well as self-study and
+                  part-time work at homee
+                </p>
               </div>
             </div>
           </section>
           <!-- End requirements -->
 
-          <section class="lecturers ">
-            
+          <section class="lecturers mt-gutter-section-sm">
+            <h5
+              class="caption-semibold text-center text-4xl text-primary md:text-left"
+            >
+              Lecturers
+            </h5>
+
+            <!-- Slider main container -->
+            <div class="swiper mt-5">
+              <!-- Additional required wrapper -->
+              <div id="lecturer-slider" class="swiper-wrapper"></div>
+
+              <div
+                class="mt-6 flex items-center justify-center gap-2 md:justify-end"
+              >
+                <div class="slider-prev-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                    />
+                  </svg>
+                </div>
+                <div class="slider-next-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </section>
           <!-- End lecturers -->
 
-          <section class="mt-gutter-section-sm relative">
-            <div class="flex items-start justify-between gap-10 py-14 ">
+          <section class="relative mt-gutter-section-sm">
+            <div
+              class="flex flex-col items-start justify-between gap-10 py-14 md:flex-row"
+            >
               <div
                 class="caption-semibold basis-1/2 text-[40px] leading-normal"
               >
-                <p class="text-primary">
+                <p class="text-center text-primary md:text-left">
                   Special Value <br />
                   <span class="text-main">from Appscyclone</span>
                 </p>
                 <img
                   src="./assets/images/special-value.png"
                   alt="Image"
-                  class="absolute -bottom-1/5 -left-1/4 w-3/4"
+                  class="md:-bottom-1/5 absolute -left-1/4 top-5 md:w-3/4"
                 />
               </div>
 
@@ -582,27 +767,37 @@
           <!-- End special-value -->
 
           <section class="mt-gutter-section-sm">
-            <div class=" w-full flex items-start justify-between relative">
-              <h5 class="caption-semibold basis-2/5 mt-4 text-4xl leading-normal text-primary">
-                Frequently <br>Asked Questions
+            <div
+              class="relative flex w-full flex-col items-start justify-between md:flex-row"
+            >
+              <h5
+                class="caption-semibold mt-4 basis-2/5 text-center text-4xl leading-normal text-primary md:text-left"
+              >
+                Frequently <br />Asked Questions
               </h5>
-              <ul class="basis-3/5">
+              <ul class="basis-3/5 mt-3">
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-4 py-2 hover:bg-secondary md:px-10 md:py-8"
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
                       <p class="mt-2 text-secondary">
-                      The practical course at Appscyclone helps students experience the projects, working processes and practical skills required to  not only apply for an internship, but also apply for higher official positions such as in companies.
+                        The practical course at Appscyclone helps students
+                        experience the projects, working processes and practical
+                        skills required to not only apply for an internship, but
+                        also apply for higher official positions such as in
+                        companies.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -610,31 +805,38 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-4 py-2 hover:bg-secondary md:px-10 md:py-8"
+                  
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
                       <p class="mt-2 text-secondary">
-                      The practical course at Appscyclone helps students experience the projects, working processes and practical skills required to  not only apply for an internship, but also apply for higher official positions such as in companies.
+                        The practical course at Appscyclone helps students
+                        experience the projects, working processes and practical
+                        skills required to not only apply for an internship, but
+                        also apply for higher official positions such as in
+                        companies.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -642,31 +844,39 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
                 <li
                   id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
+                  class="toggle flex items-start justify-between gap-10 px-4 py-2 hover:bg-secondary md:px-10 md:py-8"
+                 
+                  
                 >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
+                  <div
+                    class="flex cursor-pointer flex-col items-start justify-between"
+                  >
+                    <p class="caption-semibold text-base text-primary">
                       Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
+                    </p>
+                    <div class="is-active-FAQ conten max-h-0 overflow-hidden">
                       <p class="mt-2 text-secondary">
-                      The practical course at Appscyclone helps students experience the projects, working processes and practical skills required to  not only apply for an internship, but also apply for higher official positions such as in companies.
+                        The practical course at Appscyclone helps students
+                        experience the projects, working processes and practical
+                        skills required to not only apply for an internship, but
+                        also apply for higher official positions such as in
+                        companies.
                       </p>
-                  </div>
+                    </div>
                   </div>
                   <div class="icon">
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -674,86 +884,52 @@
                       stroke="currentColor"
                       class="size-6 cursor-pointer"
                       id="faq-toggle-icon"
-                  >
+                    >
                       <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
                       />
-                  </svg>
+                    </svg>
                   </div>
                 </li>
-                <li
-                  id="faq"
-                  class="toggle flex items-start justify-between gap-10 px-10 py-8 hover:bg-secondary"
-                >
-                <div class="cursor-pointer flex flex-col items-start justify-between">
-                  <p class="caption-semibold text-base text-primary">
-                      Add commonly asked questions here
-                  </p>
-                  <div class="is-active-FAQ conten max-h-0 overflow-hidden">
-                      <p class="mt-2 text-secondary">
-                      The practical course at Appscyclone helps students experience the projects, working processes and practical skills required to  not only apply for an internship, but also apply for higher official positions such as in companies.
-                      </p>
-                  </div>
-                  </div>
-                  <div class="icon">
-                  <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6 cursor-pointer"
-                      id="faq-toggle-icon"
-                  >
-                      <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                      />
-                  </svg>
-                  </div>
-                </li>
-                
               </ul>
-              
             </div>
           </section>
           <!-- End faqs -->
 
           <section class="mt-gutter-section-sm">
-            <h5 class="caption-semibold text-4xl text-primary capitalize">
+            <h5 class="caption-semibold text-center md:text-left text-4xl capitalize text-primary">
               Recommended Courses
             </h5>
-            <div class="flex items-center justify-between gap-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mt-5">
               <my-course
-                  type="Game"
-                  author="Jane Cooper"
-                  price="4.000.000"
-                  title="Unity"
-                  avtImg="./assets/images/avt.jpg"
-                  courseImg="./assets/images/course-react.png"
-                  class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-                ></my-course>
-                <my-course
-                  type="Game"
-                  author="Jane Cooper"
-                  price="4.000.000"
-                  title="Unity"
-                  avtImg="./assets/images/avt.jpg"
-                  courseImg="./assets/images/course-react.png"
-                  class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-                ></my-course>
-                <my-course
-                  type="Game"
-                  author="Jane Cooper"
-                  price="4.000.000"
-                  title="Unity"
-                  avtImg="./assets/images/avt.jpg"
-                  courseImg="./assets/images/course-react.png"
-                  class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
-                ></my-course>
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
+              <my-course
+                type="Game"
+                author="Jane Cooper"
+                price="4.000.000"
+                title="Unity"
+                avtImg="./assets/images/avt.jpg"
+                courseImg="./assets/images/course-react.png"
+                class="group max-h-[454px] bg-secondary transition-all duration-200 ease-in-out hover:drop-shadow-xl"
+              ></my-course>
             </div>
           </section>
           <!-- End recomended-courses -->
@@ -764,5 +940,10 @@
         <!-- End footer -->
       </div>
     </div>
+
+    <script
+      src="./assets/js/lecturer-slider.js"
+      type="text/javascript"
+    ></script>
   </body>
 </html>

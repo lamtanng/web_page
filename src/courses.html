@@ -8,11 +8,7 @@
     <title>Courses</title>
     <script src="./assets/layout/footer.js" type="module" defer></script>
     <script src="./assets/layout/header.js" type="module" defer></script>
-    <script
-      src="./assets/js/pagination.js"
-      type="text/javascript"
-      defer
-    ></script>
+    <script src="./assets/js/pagination.js" type="module" defer></script>
     <script
       src="./assets/js/active-filter.js"
       type="text/javascript"
@@ -29,30 +25,62 @@
         <!-- End header -->
 
         <main class="mt-[theme(height.header)]">
-          <section class="mx-padding-page my-32">
+          <section
+            class="mx-padding-page-mobile my-gutter-section-sm lg:mx-padding-page lg:my-gutter-section-md"
+          >
             <h4
               id="heading"
               class="caption-semibold text-4xl capitalize text-primary"
             >
               All Courses
             </h4>
-            <ul class="mt-10 flex items-center justify-start">
-              <button class="btn-tab-filter cus-btn-filter is-active-filter">
+            <ul
+              class="mt-10 flex flex-wrap md:flex-nowrap items-center justify-start gap-4 md:gap-0"
+            >
+              <button
+                class="btn-tab-filter cus-btn-filter is-active-filter flex-1 md:flex-none"
+              >
                 All
               </button>
-              <button class="btn-tab-filter cus-btn-filter">Frontend</button>
-              <button class="btn-tab-filter cus-btn-filter">Backend</button>
-              <button class="btn-tab-filter cus-btn-filter">Design</button>
-              <button class="btn-tab-filter cus-btn-filter">Mobile</button>
-              <button class="btn-tab-filter cus-btn-filter">QC</button>
-              <button class="btn-tab-filter cus-btn-filter">Blockchain</button>
+              <button
+                class="btn-tab-filter cus-btn-filter max-md:flex-grow-0 max-sm:flex-1"
+              >
+                Frontend
+              </button>
+              <button
+                class="btn-tab-filter cus-btn-filter max-md:flex-grow-0 max-sm:flex-1"
+              >
+                Backend
+              </button>
+              <button
+                class="btn-tab-filter cus-btn-filter max-md:flex-grow-0 max-sm:flex-1"
+              >
+                Design
+              </button>
+              <button
+                class="btn-tab-filter cus-btn-filter max-md:flex-grow-0 max-sm:flex-1"
+              >
+                Mobile
+              </button>
+              <button
+                class="btn-tab-filter cus-btn-filter max-md:flex-grow-0 max-sm:flex-1"
+              >
+                QC
+              </button>
+              <button
+                class="btn-tab-filter cus-btn-filter max-md:flex-grow-0 max-sm:flex-1"
+              >
+                Blockchain
+              </button>
             </ul>
             <div
               id="course-list"
-              class="mt-8 grid auto-cols-max auto-rows-min grid-cols-3 gap-x-6 gap-y-14"
+              class="mt-8 grid auto-rows-max grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-28 lg:grid-cols-3 lg:gap-y-14"
             ></div>
 
-            <div class="mt-16 flex items-center justify-center gap-5">
+            <div
+              class="mt-16 flex items-center justify-center gap-5 md:max-lg:mt-28"
+            >
               <a href="#heading" id="prev-button" class="cus-btn-pagination">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +100,7 @@
 
               <div
                 id="page-numbers"
-                class="flex items-center justify-center gap-2"
+                class="flex flex-wrap items-center justify-center gap-2"
               ></div>
 
               <a href="#heading" id="next-button" class="cus-btn-pagination">
