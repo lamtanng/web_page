@@ -31,7 +31,7 @@ const swiper = new Swiper(".swiper", {
   },
   on: {
     click: function () {
-      swiper.slideTo(this.clickedIndex);
+      this.slideTo(this.clickedIndex);
     },
   },
 });

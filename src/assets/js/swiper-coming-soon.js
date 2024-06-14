@@ -1,4 +1,4 @@
-const swiper_comming_soon = new Swiper(".swiper-commingsoon", {
+const swiper_coming_soon = new Swiper(".swiper-commingsoon", {
   direction: "horizontal",
   loop: false,
   grabCursor: true,

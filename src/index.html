@@ -26,21 +26,21 @@
     ></script>
     <script src="./assets/layout/footer.js" type="module" defer></script>
     <script src="./assets/layout/header.js" type="module" defer></script>
-    <script src="./assets/js/swiper.js" type="text/javascript" defer></script>
     <script
       src="./assets/js/toggle-menu-header.js"
       type="text/javascript"
       defer
     ></script>
+    <script src="./assets/js/swiper.js" type="text/javascript" defer></script>
     <script
       src="./assets/js/swiper-coming-soon.js"
       type="text/javascript"
-      async
+      defer
     ></script>
     <script
       src="./assets/js/swiper-evaluation.js"
       type="text/javascript"
-      async
+      defer
     ></script>
     <script
       src="./assets/components/special-value.js"
@@ -100,7 +100,7 @@
 
           <section
             id="coming-soon"
-            class="ml-padding-page-mobile mt-gutter-section-sm md:ml-padding-page-tablet md:mt-gutter-section-md lg:ml-padding-page"
+            class="mx-padding-page-mobile mt-gutter-section-sm md:ml-padding-page-tablet md:mt-gutter-section-md lg:ml-padding-page"
           >
             <div
               class="itemitems-center flex justify-between gap-5 max-sm:flex-col"
@@ -647,12 +647,14 @@
             class="mx-padding-page-mobile mt-gutter-section-sm md:mx-padding-page-tablet lg:mx-padding-page lg:mt-gutter-section-md"
           >
             <div
-              class="flex flex-col items-center justify-between gap-32 py-10 lg:flex-row"
+              class="flex flex-col items-center justify-between gap-10 py-24 md:gap-32 lg:flex-row"
             >
               <div
                 class="flex flex-col items-center justify-between lg:items-start"
               >
-                <h5 class="caption-semibold text-3xl text-primary lg:text-4xl">
+                <h5
+                  class="caption-semibold text-center text-3xl text-primary md:text-left lg:text-4xl"
+                >
                   Student <br />Evaluations
                 </h5>
                 <!-- navigate btn -->
@@ -695,6 +697,109 @@
               </div>
 
               <!-- start evaluation-slider -->
+              <div
+                class="flex flex-col items-center justify-between gap-8 md:flex-row max-w-full "
+              >
+                <div class="md:basis-1/2 overflow-hidden h-fit w-fit max-sm:translate-x-44">
+                  <div class="swiper-st-evaluation">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide border border-gray-300">
+                        <div
+                          class="flex flex-col items-start justify-between gap-8 p-8"
+                        >
+                          <img
+                            src="./assets/images/quote-icon.png"
+                            alt="quote"
+                            class="scale-110"
+                          />
+                          <p class="typo-regular text-base text-secondary">
+                            Mentors teach with heart and enthusiasm. I am a
+                            person who does not know html and css, after the
+                            course, I can confidently code the interface
+                            according to the design and also handle events with
+                            javascript and jquery. Mentors teach with heart and
+                            enthusiasm. I am a person who does not know html and
+                            css, after the course, I can confidently code the
+                            interface according to the design and also handle
+                            events with javascript and jquery.
+                          </p>
+                          <div class="flex items-center justify-between gap-2">
+                            <img
+                              src="./assets/images/avt.jpg"
+                              alt="student avatar"
+                              class="aspect-square w-10 rounded-full object-cover object-top"
+                            />
+                            <div
+                              class="mt-[10px] flex flex-col items-start justify-between"
+                            >
+                              <p
+                                class="typo-semibold text-base leading-4 text-primary"
+                              >
+                                Jane Copper
+                              </p>
+                              <p class="typo-regular text-secondary">
+                                Student CFD1
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide border border-gray-300">
+                        <div
+                          class="flex flex-col items-start justify-between gap-8 p-8"
+                        >
+                          <img
+                            src="./assets/images/quote-icon.png"
+                            alt="quote"
+                            class="scale-110"
+                          />
+                          <p class="typo-regular text-base text-secondary">
+                            Hello teach with heart and enthusiasm. I am a
+                            person who does not know html and css, after the
+                            course, I can confidently code the interface
+                            according to the design and also handle events with
+                            javascript and jquery. Mentors teach with heart and
+                            enthusiasm. I am a person who does not know html and
+                            css, after the course, I can confidently code the
+                            interface according to the design and also handle
+                            events with javascript and jquery.
+                          </p>
+                          <div class="flex items-center justify-between gap-2">
+                            <img
+                              src="./assets/images/avt.jpg"
+                              alt="student avatar"
+                              class="aspect-square w-10 rounded-full object-cover object-top"
+                            />
+                            <div
+                              class="mt-[10px] flex flex-col items-start justify-between"
+                            >
+                              <p
+                                class="typo-semibold text-base leading-4 text-primary"
+                              >
+                                Jane Copper
+                              </p>
+                              <p class="typo-regular text-secondary">
+                                Student CFD1
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- evaluation cover -->
+                <div class="basis-1/2">
+                  <img
+                    src="./assets/images/cover-st-evaluation.png"
+                    alt="cover"
+                    class="scale-100"
+                  />
+                </div>
+              </div>
             </div>
           </section>
           <!--End student-evaluation-->
@@ -919,6 +1024,6 @@
       </div>
     </div>
 
-    <script src="./assets/js/team-slider.js" type="text/javascript"></script>
+    <script src="./assets/js/team-slider.js" type="module"></script>
   </body>
 </html>
