@@ -13,7 +13,7 @@ class MyCourse extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-        <div class="course p-5 bg-secondary ">
+        <div class="course lg:p-5 px-3 py-4 bg-secondary ">
                   <a href="${this.courseDetailsUrl}" class="">
                     <img
                       src="${this.courseImg}"

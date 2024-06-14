@@ -32,8 +32,8 @@ const swiper_evaluation = new Swiper(".swiper-st-evaluation", {
     prevEl: ".slider-prev-btn",
     disabledClass: "is-disable-btn",
   },
-  // autoplay: {
-  //   delay: 3000,
-  //   pauseOnMouseEnter: true,
-  // },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+  },
 });

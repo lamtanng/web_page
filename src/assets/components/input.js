@@ -16,7 +16,8 @@ class MyInput extends HTMLElement {
             <label
                 for="${this.my_id}"
                 class="typo-semibold text-base text-primary cursor-pointer"
-                >${this.title}</label>
+                >${this.title}
+            </label>
             <${this.isTextArea ? "textarea" : "input"}
                 type="${this.type}"
                 name="${this.my_id}"

@@ -15,7 +15,7 @@ class MyMember extends HTMLElement {
                     src="${this.src}"
                     alt="${this.name}"
                     onerror="this.onerror=null;this.src='./assets/images/no-avt.png';"
-                    class="absolute bottom-0 left-0"/>
+                    class="absolute bottom-0 left-0 hover:scale-105 transition-all duration-300 ease-in-out"/>
                 <div
                     class="absolute bottom-5 left-0 min-w-48 max-w-48 overflow-hidden bg-white px-3 pb-1 pt-2"
                 >
