@@ -794,7 +794,8 @@ video {
 }
 
 .is-disable-btn {
-  cursor: default !important;
+  pointer-events: none;
+  cursor: not-allowed !important;
   border-style: none !important;
   --tw-bg-opacity: 1 !important;
   background-color: rgb(244 244 246 / var(--tw-bg-opacity)) !important;
