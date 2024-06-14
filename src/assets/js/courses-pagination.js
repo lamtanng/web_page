@@ -10,7 +10,6 @@ const renderCourseList = () => {
     (currentPage - 1) * modelPerPage, //get first course index
     currentPage * modelPerPage, //get last course index
   );
-  console.log(currentCourseList);
 
   let courseElements = ``;
   currentCourseList.map((course) => {
@@ -42,7 +41,7 @@ const renderPageNumbers = () => {
   for (let i = 1; i <= totalPage; i++) {
     let numberBtn = document.createElement("button");
     numberBtn.innerHTML = i;
-    numberBtn.setAttribute("onClick", `handlePagination(${i})`);
+    numberBtn.addEventListener("click", () => handlePagination(i));
     numberBtn.classList.add("cus-btn-pagination");
     if (i === currentPage) {
       numberBtn.classList.add("is-active-pagination");
@@ -54,16 +53,19 @@ const renderPageNumbers = () => {
     ? (prevBtn.setAttribute("disabled", true),
       prevBtn.classList.add("is-disable-btn"))
     : (prevBtn.removeAttribute("disabled"),
-      prevBtn.classList.remove("is-disable-btn"));
+      prevBtn.classList.remove("is-disable-btn"),
+      prevBtn.addEventListener("click", () =>
+        handlePagination(currentPage - 1),
+      ));
 
   currentPage === totalPage
     ? (nextBtn.setAttribute("disabled", true),
       nextBtn.classList.add("is-disable-btn"))
     : (nextBtn.removeAttribute("disabled"),
-      nextBtn.classList.remove("is-disable-btn"));
-
-  prevBtn.setAttribute("onClick", `handlePagination(${currentPage - 1})`);
-  nextBtn.setAttribute("onClick", `handlePagination(${currentPage + 1})`);
+      nextBtn.classList.remove("is-disable-tn"),
+      nextBtn.addEventListener("click", () =>
+        handlePagination(currentPage + 1),
+      ));
 };
 
 const handlePagination = (pageNumber) => {

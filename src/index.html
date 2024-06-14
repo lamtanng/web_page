@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-
+    <title>Apps Cyclone</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -14,7 +14,7 @@
     <script
       src="./assets/js/asked-question-toggle.js"
       type="text/javascript"
-      async
+      defer
     ></script>
 
     <script src="./assets/components/course.js" type="module" defer></script>
@@ -26,8 +26,12 @@
     ></script>
     <script src="./assets/layout/footer.js" type="module" defer></script>
     <script src="./assets/layout/header.js" type="module" defer></script>
-    <script src="./assets/js/swiper.js" type="text/javascript" async></script>
-    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
+    <script src="./assets/js/swiper.js" type="text/javascript" defer></script>
+    <script
+      src="./assets/js/toggle-menu-header.js"
+      type="text/javascript"
+      defer
+    ></script>
     <script
       src="./assets/js/swiper-coming-soon.js"
       type="text/javascript"
@@ -96,7 +100,7 @@
 
           <section
             id="coming-soon"
-            class="md:ml-padding-page-tablet ml-padding-page-mobile mt-gutter-section-sm md:mt-gutter-section-md lg:ml-padding-page"
+            class="ml-padding-page-mobile mt-gutter-section-sm md:ml-padding-page-tablet md:mt-gutter-section-md lg:ml-padding-page"
           >
             <div
               class="itemitems-center flex justify-between gap-5 max-sm:flex-col"
@@ -451,7 +455,7 @@
 
           <section
             id="all-courses "
-            class="md:mx-padding-page-tablet mx-padding-page-mobile mt-gutter-section-md p-padding-page-mobile lg:mx-padding-page lg:bg-secondary lg:p-12"
+            class="mx-padding-page-mobile mt-gutter-section-md p-padding-page-mobile md:mx-padding-page-tablet lg:mx-padding-page lg:bg-secondary lg:p-12"
           >
             <div
               class="flex flex-col items-start justify-between gap-16 md:flex-row"
@@ -532,7 +536,7 @@
 
           <section
             id="AC-team"
-            class="md:mx-padding-page-tablet mx-padding-page-mobile mt-gutter-section-md lg:mx-padding-page"
+            class="mx-padding-page-mobile mt-gutter-section-md md:mx-padding-page-tablet lg:mx-padding-page"
           >
             <div class="swiper">
               <div
@@ -598,10 +602,10 @@
 
           <section id="special-value" class="mt-gutter-section-md bg-secondary">
             <div
-              class="md:mx-padding-page-tablet relative mx-padding-page-mobile flex flex-col items-start justify-between gap-10 py-14 lg:mx-padding-page lg:flex-row"
+              class="relative mx-padding-page-mobile flex flex-col items-start justify-between gap-10 py-14 md:mx-padding-page-tablet lg:mx-padding-page lg:flex-row"
             >
               <div
-                class="caption-semibold basis-1/2 text-center text-4xl leading-normal max-lg:mx-auto lg:text-left md:text-[40px]"
+                class="caption-semibold basis-1/2 text-center text-4xl leading-normal max-lg:mx-auto md:text-[40px] lg:text-left"
               >
                 <p class="text-primary">
                   Special Value <br />
@@ -640,7 +644,7 @@
 
           <section
             id="student-evaluation"
-            class="md:mx-padding-page-tablet mx-padding-page-mobile mt-gutter-section-sm lg:mx-padding-page lg:mt-gutter-section-md"
+            class="mx-padding-page-mobile mt-gutter-section-sm md:mx-padding-page-tablet lg:mx-padding-page lg:mt-gutter-section-md"
           >
             <div
               class="flex flex-col items-center justify-between gap-32 py-10 lg:flex-row"
@@ -712,7 +716,7 @@
 
             <!-- start content -->
             <div
-              class="md:px-padding-page-tablet relative flex w-full flex-col items-start justify-between px-padding-page-mobile md:flex-row lg:px-padding-page"
+              class="relative flex w-full flex-col items-start justify-between px-padding-page-mobile md:flex-row md:px-padding-page-tablet lg:px-padding-page"
             >
               <h5
                 class="caption-semibold mx-auto mt-4 basis-2/5 text-center text-3xl leading-normal text-primary md:mx-0 md:text-left md:text-4xl"

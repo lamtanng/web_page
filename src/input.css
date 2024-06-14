@@ -107,7 +107,7 @@
     @apply bg-main;
   }
   .is-disable-btn {
-    @apply !cursor-default !border-none !bg-secondary !text-disable hover:!bg-secondary hover:!text-disable;
+    @apply pointer-events-none !cursor-not-allowed !border-none !bg-secondary !text-disable hover:!bg-secondary hover:!text-disable;
   }
   .is-active-FAQ {
     @apply transition-max_height duration-300 ease-in-out;
