@@ -19,22 +19,22 @@ class MyHeader extends HTMLElement {
             id="header-menu"
             role="list"
           >
-            <li>
+            <li class="max-sm:hover:translate-x-4 transition-all duration-300 ease-in-out">
               <a
                 href="index.html"
-                class="transition-all duration-300 ease-in-out hover:text-main"
+                class="transition-all duration-300 ease-in-out md:hover:text-main "
                 >Home</a
               >
             </li>
-            <li>
+            <li class="max-sm:hover:translate-x-4 transition-all duration-300 ease-in-out">
               <a
                 href="courses.html"
-                class="transition-all duration-300 ease-in-out hover:text-main"
+                class="transition-all duration-300 ease-in-out md:hover:text-main"
                 >Course</a
               >
             </li>
             <li class="ml-4 mb-[2px]">
-              <a href="registered.html" class="cus-button-primary">Registered</a>
+              <a href="registered.html" class="cus-button-primary max-sm:text-2xl max-sm:hover:scale-105">Registered</a>
             </li>
             <li
               class="absolute right-5 top-5 scale-110 cursor-pointer font-semibold md:hidden"
