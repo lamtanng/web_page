@@ -681,10 +681,8 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (min-width: 768px) {
-  .cus-button-primary:hover {
-    background-color: rgba(0, 168, 164, 1);
-  }
+.cus-button-primary:hover {
+  background-color: rgba(0, 168, 164, 1);
 }
 
 .cus-button-secondary {
@@ -1367,6 +1365,22 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
 @keyframes fadeIn_to_left {
   0% {
     transform: translateX(100%);
@@ -1963,14 +1977,6 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:typo-semibold {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-  }
-}
-
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -2087,6 +2093,11 @@ video {
     --tw-scale-x: 1.05;
     --tw-scale-y: 1.05;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .max-sm\:hover\:bg-tertiary:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(13 15 53 / var(--tw-bg-opacity));
   }
 }
 
