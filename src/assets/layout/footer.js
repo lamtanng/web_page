@@ -24,7 +24,7 @@ class MyFooter extends HTMLElement {
                 Wanna learn with us? <br />
                 Get in touch
               </h4>
-              <a href="" class="cus-button-primary max-sm:w-full">Registered</a>
+              <a href="registered.html" class="cus-button-primary max-sm:w-full">Registered</a>
             </div>
 
             <div
@@ -32,10 +32,10 @@ class MyFooter extends HTMLElement {
             >
               <h4 class="caption-semibold text-lg text-primary">Navigation</h4>
               <div class="">
-                <a href="#">
+                <a href="index.html">
                   <p class="typo-semibold text-base text-secondary">Home</p>
                 </a>
-                <a href="#">
+                <a href="courses.html">
                   <p
                     class="typo-semibold mt-2 text-base text-secondary md:mt-3"
                   >
