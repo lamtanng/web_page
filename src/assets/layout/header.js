@@ -11,7 +11,7 @@ class MyHeader extends HTMLElement {
           class="fixed top-0 z-50 flex h-header w-full items-center justify-between bg-primary  px-5 pb-2 pt-4 lg:px-padding-page md:px-padding-page-tablet"
         >
           <a href="index.html">
-            <img src="./assets/icons/logo-goto.svg" alt="Logo" class="w-44 scale-x-110"/>
+            <img src="./assets/icons/logo-goto.svg" alt="Logo" class="w-44 scale-x-100"/>
           </a>
 
           <ul
@@ -81,40 +81,5 @@ class MyHeader extends HTMLElement {
         `;
   }
 }
-
-// let headerMenu = document.getElementById("header-menu");
-// let headerToggleOpen = document.getElementById("header-menu-toggle-icon");
-// let headerToggleClose = document.getElementById("header-menu-close-icon");
-
-// console.log(!!document.getElementById("header-menu-toggle-icon"));
-// headerToggleOpen &&
-//   headerToggleOpen.addEventListener("click", (e) => {
-//     // if (headerMenu) {
-//     // alert("clicked");
-//     headerMenu.classList.remove("hidden");
-//     headerMenu.classList.add("max-lg:header-menu__expanded"); //add 'max-lg' prefix to check breakpoint
-//     // }
-//   });
-
-// headerToggleClose &&
-//   headerToggleClose.addEventListener("click", (e) => {
-//     // if (headerMenu) {
-//     headerMenu.classList.remove("max-lg:header-menu__expanded");
-//     headerMenu.classList.add("hidden");
-//     // }
-//   });
-
-// const openHeader = () => {
-//   alert("clicked");
-//   // let headerMenu = document.getElementById("header-menu");
-//   // headerMenu.classList.remove("hidden");
-//   // headerMenu.classList.add("max-lg:header-menu__expanded");
-// };
-
-// const closeHeader = () => {
-//   let headerMenu = document.getElementById("header-menu");
-//   headerMenu.classList.remove("hidden");
-//   headerMenu.classList.add("max-lg:header-menu__expanded");
-// };
 
 customElements.define("my-header", MyHeader);
