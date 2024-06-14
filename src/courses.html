@@ -6,15 +6,19 @@
     <script src="./assets/components/course.js" type="module" defer></script>
     <link href="./output.css" rel="stylesheet" />
     <title>Courses</title>
-    <script src="./assets/layout/footer.js" type="module" defer></script>
-    <script src="./assets/layout/header.js" type="module" defer></script>
-    <script src="./assets/js/pagination.js" type="module" defer></script>
+    <script src="./assets/layout/footer.js" type="module"></script>
+    <script src="./assets/layout/header.js" type="module"></script>
+
     <script
       src="./assets/js/active-filter.js"
       type="text/javascript"
       defer
     ></script>
-    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
+    <script
+      src="./assets/js/toggle-menu-header.js"
+      type="text/javascript"
+      defer
+    ></script>
   </head>
   <body>
     <div class="root overflow-hidden">
@@ -26,7 +30,7 @@
 
         <main class="mt-[theme(height.header)]">
           <section
-            class="md:mx-padding-page-tablet mx-padding-page-mobile my-gutter-section-sm lg:mx-padding-page lg:my-gutter-section-md"
+            class="mx-padding-page-mobile my-gutter-section-sm md:mx-padding-page-tablet lg:mx-padding-page lg:my-gutter-section-md"
           >
             <h4
               id="heading"
@@ -37,7 +41,7 @@
 
             <!-- filter tab -->
             <ul
-              class="mt-10 flex flex-wrap items-center justify-start gap-4 lg:gap-x-0 md:gap-x-1 lg:flex-nowrap"
+              class="mt-10 flex flex-wrap items-center justify-start gap-4 md:gap-x-1 lg:flex-nowrap lg:gap-x-0"
             >
               <button
                 class="btn-tab-filter cus-btn-filter is-active-filter flex-1 md:flex-none"
@@ -86,7 +90,7 @@
             <div
               class="mt-16 flex items-center justify-center gap-5 md:max-lg:mt-28"
             >
-              <a href="#heading" id="prev-button" class="cus-btn-pagination">
+              <a href="#" id="prev-button" class="cus-btn-pagination">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -108,7 +112,7 @@
                 class="flex flex-wrap items-center justify-center gap-2"
               ></div>
 
-              <a href="#heading" id="next-button" class="cus-btn-pagination">
+              <a href="#" id="next-button" class="cus-btn-pagination">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -132,5 +136,12 @@
         <!-- End footer -->
       </div>
     </div>
+
+    <!-- scripts -->
+    <script
+      src="./assets/js/courses-pagination.js"
+      type="module"
+      async
+    ></script>
   </body>
 </html>

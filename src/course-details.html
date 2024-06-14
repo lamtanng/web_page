@@ -10,8 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./assets/layout/footer.js" type="module" defer></script>
-    <script src="./assets/layout/header.js" type="module" defer></script>
+    <script src="./assets/layout/footer.js" type="module"></script>
+    <script src="./assets/layout/header.js" type="module"></script>
     <script src="./assets/components/faqs.js" type="module" async></script>
     <script src="./assets/components/lecturer.js" type="module" async></script>
     <script
@@ -20,12 +20,16 @@
       async
     ></script>
     <script src="./assets/components/course.js" type="module" async></script>
-    <script src="./assets/js/toggle.js" type="text/javascript" async></script>
-    <script src="./assets/js/swiper.js" type="text/javascript" async></script>
+    <script
+      src="./assets/js/toggle-menu-header.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script src="./assets/js/swiper.js" type="text/javascript" defer></script>
     <script
       src="./assets/js/asked-question-toggle.js"
       type="module"
-      async
+      defer
     ></script>
   </head>
   <body>
@@ -37,7 +41,7 @@
         <!-- End header -->
 
         <main
-          class="md:px-padding-page-tablet mb-gutter-section-sm mt-[theme(height.header)] px-padding-page-mobile lg:mb-gutter-section-md lg:px-padding-page"
+          class="mb-gutter-section-sm mt-[theme(height.header)] px-padding-page-mobile md:px-padding-page-tablet lg:mb-gutter-section-md lg:px-padding-page"
         >
           <section
             class="flex flex-col-reverse items-center justify-between gap-4 bg-secondary pb-6 md:flex-row md:items-start md:gap-8 md:p-8"

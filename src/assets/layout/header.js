@@ -1,3 +1,5 @@
+// import { openHeader, closeHeader } from "../js/toggle.js";
+
 class MyHeader extends HTMLElement {
   constructor() {
     super();
@@ -46,6 +48,7 @@ class MyHeader extends HTMLElement {
                 stroke="currentColor"
                 class="size-6"
                 id="header-menu-close-icon"
+                onClick="closeHeader()"
               >
                 <path
                   stroke-linecap="round"
@@ -56,7 +59,7 @@ class MyHeader extends HTMLElement {
             </li>
           </ul>
 
-          <div class="cursor-pointer md:hidden" >
+          <div class="cursor-pointer md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -65,6 +68,7 @@ class MyHeader extends HTMLElement {
               stroke="currentColor"
               class="size-6"
               id="header-menu-toggle-icon"
+              
             >
               <path
                 stroke-linecap="round"
@@ -77,5 +81,40 @@ class MyHeader extends HTMLElement {
         `;
   }
 }
+
+// let headerMenu = document.getElementById("header-menu");
+// let headerToggleOpen = document.getElementById("header-menu-toggle-icon");
+// let headerToggleClose = document.getElementById("header-menu-close-icon");
+
+// console.log(!!document.getElementById("header-menu-toggle-icon"));
+// headerToggleOpen &&
+//   headerToggleOpen.addEventListener("click", (e) => {
+//     // if (headerMenu) {
+//     // alert("clicked");
+//     headerMenu.classList.remove("hidden");
+//     headerMenu.classList.add("max-lg:header-menu__expanded"); //add 'max-lg' prefix to check breakpoint
+//     // }
+//   });
+
+// headerToggleClose &&
+//   headerToggleClose.addEventListener("click", (e) => {
+//     // if (headerMenu) {
+//     headerMenu.classList.remove("max-lg:header-menu__expanded");
+//     headerMenu.classList.add("hidden");
+//     // }
+//   });
+
+// const openHeader = () => {
+//   alert("clicked");
+//   // let headerMenu = document.getElementById("header-menu");
+//   // headerMenu.classList.remove("hidden");
+//   // headerMenu.classList.add("max-lg:header-menu__expanded");
+// };
+
+// const closeHeader = () => {
+//   let headerMenu = document.getElementById("header-menu");
+//   headerMenu.classList.remove("hidden");
+//   headerMenu.classList.add("max-lg:header-menu__expanded");
+// };
 
 customElements.define("my-header", MyHeader);
