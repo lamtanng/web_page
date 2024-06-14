@@ -137,4 +137,8 @@
   .slider-next-btn {
     @apply slider-navigated-btn;
   }
+
+  .cus-rotate-180 {
+    @apply rotate-180 transition-transform duration-300 ease-in-out;
+  }
 }
