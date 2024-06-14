@@ -2098,10 +2098,6 @@ video {
     width: fit-content;
   }
 
-  .md\:max-w-0 {
-    max-width: 0px;
-  }
-
   .md\:max-w-\[50\%\] {
     max-width: 50%;
   }
