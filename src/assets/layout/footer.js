@@ -33,11 +33,11 @@ class MyFooter extends HTMLElement {
               <h4 class="caption-semibold text-lg text-primary">Navigation</h4>
               <div class="">
                 <a href="index.html">
-                  <p class="typo-semibold text-base text-secondary">Home</p>
+                  <p class="typo-semibold text-base text-secondary hover:text-primary">Home</p>
                 </a>
                 <a href="courses.html">
                   <p
-                    class="typo-semibold mt-2 text-base text-secondary md:mt-3"
+                    class="typo-semibold mt-2 text-base text-secondary hover:text-primary md:mt-3"
                   >
                     Course
                   </p>
@@ -56,8 +56,8 @@ class MyFooter extends HTMLElement {
                 </p>
               </a>
               <div class="flex items-center justify-between gap-4">
-                <a href="#">
-                  <img src="./assets/icons/twitter.png" alt="twitter" />
+                <a href="#" >
+                  <img src="./assets/icons/twitter.png" alt="twitter"  />
                 </a>
                 <a href="#">
                   <img src="./assets/icons/whatsapp.png" alt="whatsapp" />
